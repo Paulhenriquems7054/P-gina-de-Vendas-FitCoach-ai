@@ -46,7 +46,7 @@ export const RechargePage: React.FC = () => {
               <p className="text-gray-500 dark:text-gray-400 text-xs">Válido por 24h. Ideal para terminar sua conversa agora.</p>
             </div>
 
-            <Button fullWidth className="bg-orange-500 hover:bg-orange-600 text-white shadow-orange-200" onClick={() => handlePurchase('https://pay.cakto.com.br/37p7odq_665751')}>
+            <Button fullWidth className="bg-orange-500 hover:bg-orange-600 text-white shadow-orange-200" onClick={() => handlePurchase('https://pay.cakto.com.br/ihfy8cz_668443')}>
               Recarregar Agora
             </Button>
           </div>
@@ -72,7 +72,7 @@ export const RechargePage: React.FC = () => {
               <p className="text-gray-500 dark:text-gray-400 text-xs">Não expira. Fica na conta e usa quando o diário acabar.</p>
             </div>
 
-            <Button variant="primary" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/gfarw9p_665758')}>
+            <Button variant="primary" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/hhxugxb_668446')}>
               Comprar Banco de Voz
             </Button>
           </div>
@@ -95,7 +95,7 @@ export const RechargePage: React.FC = () => {
               <p className="text-gray-500 dark:text-gray-400 text-xs">Remova o limite de 15 minutos diários pelo próximo mês.</p>
             </div>
 
-            <Button fullWidth className="bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200" onClick={() => handlePurchase('https://pay.cakto.com.br/hf8u6n9_665763')}>
+            <Button fullWidth className="bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200" onClick={() => handlePurchase('https://pay.cakto.com.br/trszqtv_668453')}>
               Liberar Acesso Total
             </Button>
           </div>

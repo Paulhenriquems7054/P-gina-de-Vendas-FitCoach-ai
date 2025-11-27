@@ -53,7 +53,7 @@ export const Pricing: React.FC = () => {
             </li>
           </ul>
           
-          <Button variant="outline" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/eh4ce3w_667829')} className="dark:text-white dark:border-gray-500 dark:hover:bg-gray-700">QUERO O PLANO MENSAL</Button>
+          <Button variant="outline" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/zeygxve_668421')} className="dark:text-white dark:border-gray-500 dark:hover:bg-gray-700">QUERO O PLANO MENSAL</Button>
         </div>
 
         {/* Annual Plan (Featured) */}
@@ -122,7 +122,7 @@ export const Pricing: React.FC = () => {
             </li>
           </ul>
           
-          <Button variant="secondary" fullWidth className="font-bold text-lg h-14" onClick={() => handlePurchase('https://pay.cakto.com.br/owys3oe')}>QUERO O PLANO ANUAL</Button>
+          <Button variant="secondary" fullWidth className="font-bold text-lg h-14" onClick={() => handlePurchase('https://pay.cakto.com.br/wvbkepi_668441')}>QUERO O PLANO ANUAL</Button>
         </div>
 
       </div>
