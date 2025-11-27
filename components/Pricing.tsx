@@ -53,7 +53,7 @@ export const Pricing: React.FC = () => {
             </li>
           </ul>
           
-          <Button variant="outline" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/owys3oe')} className="dark:text-white dark:border-gray-500 dark:hover:bg-gray-700">QUERO O PLANO MENSAL</Button>
+          <Button variant="outline" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/eh4ce3w_667829')} className="dark:text-white dark:border-gray-500 dark:hover:bg-gray-700">QUERO O PLANO MENSAL</Button>
         </div>
 
         {/* Annual Plan (Featured) */}
