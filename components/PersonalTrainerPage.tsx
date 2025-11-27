@@ -23,7 +23,7 @@ export const PersonalTrainerPage: React.FC = () => {
             O seu treino é excelente. <br className="hidden md:block"/> Mas e a dieta do seu aluno?
           </h1>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Pare de perder alunos por falta de resultado. Entregue um Nutricionista IA junto com sua consultoria e garanta a transformação completa do seu cliente.
+            Pare de perder alunos por falta de resultado. Entregue Nutricionista + Personal Trainer IA junto com sua consultoria e garanta a transformação completa do seu cliente.
           </p>
           <Button variant="primary" className="mx-auto bg-orange-600 hover:bg-orange-700 shadow-orange-500/20" onClick={scrollToPlans}>
             VER PLANOS PARA PERSONAIS <ChevronDown size={18} />
@@ -47,7 +47,7 @@ export const PersonalTrainerPage: React.FC = () => {
                 <h2 className="font-serif text-3xl font-bold mb-4 text-orange-100">Por que os maiores Treinadores usam?</h2>
                 <div className="w-20 h-1 bg-orange-500 mb-6 mx-auto md:mx-0"></div>
                 <p className="text-lg text-gray-200 leading-relaxed">
-                    "A conta é simples: O aluno que treina mas come errado, não vê mudança no espelho. E quem ele culpa? <span className="text-orange-400 font-bold">O treino.</span> Ao oferecer o Nutri AI, você fecha o ciclo (Treino + Alimentação). O aluno tem resultado rápido, sua autoridade aumenta e um aluno com resultado renova o contrato por anos. O custo do app é irrelevante perto do valor de um aluno fidelizado."
+                    "A conta é simples: O aluno que treina mas come errado, não vê mudança no espelho. E quem ele culpa? <span className="text-orange-400 font-bold">O treino.</span> Ao oferecer o Fitcoach.ia, você fecha o ciclo completo: Treinos personalizados + Alimentação inteligente. O aluno tem resultado rápido, sua autoridade aumenta e um aluno com resultado renova o contrato por anos. O custo do app é irrelevante perto do valor de um aluno fidelizado."
                 </p>
             </div>
          </div>
@@ -122,7 +122,8 @@ export const PersonalTrainerPage: React.FC = () => {
 
             <ul className="space-y-4 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> 5 Licenças Premium</li>
-              <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> Análise de Pratos Ilimitada</li>
+              <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> Análise de Pratos + Treinos Ilimitada</li>
+              <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> Treinos Personalizados</li>
               <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> Relatórios Básicos</li>
             </ul>
           </div>
@@ -154,7 +155,8 @@ export const PersonalTrainerPage: React.FC = () => {
 
             <ul className="space-y-4 text-sm text-white/90">
               <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> 15 Licenças Premium</li>
-              <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> Análise de Pratos Ilimitada</li>
+              <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> Análise de Pratos + Treinos Ilimitada</li>
+              <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> Treinos Personalizados</li>
               <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> Suporte Prioritário</li>
               <li className="flex items-center gap-3 font-bold text-orange-300"><div className="bg-orange-500 p-1 rounded-full"><Users size={12} className="text-white" /></div> Margem de Lucro Maior</li>
             </ul>
@@ -170,7 +172,7 @@ export const PersonalTrainerPage: React.FC = () => {
          <div className="space-y-8">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm reveal delay-100">
                <h3 className="font-bold text-lg text-nutri-dark dark:text-white mb-2">Eu preciso ser nutricionista para usar?</h3>
-               <p className="text-gray-600 dark:text-gray-300">Não! O Nutri AI é uma ferramenta educativa independente. Você prescreve o treino, e a IA cuida da orientação alimentar do aluno, ajudando ele a fazer melhores escolhas diárias.</p>
+               <p className="text-gray-600 dark:text-gray-300">Não! O Fitcoach.ia é uma ferramenta educativa independente. Você pode usar para complementar seu trabalho: a IA cria treinos personalizados e cuida da orientação alimentar do aluno, ajudando ele a fazer melhores escolhas diárias e manter a consistência nos treinos.</p>
             </div>
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm reveal delay-200">

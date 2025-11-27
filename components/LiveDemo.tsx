@@ -13,7 +13,7 @@ export const LiveDemo: React.FC = () => {
   const [showLiveResponse, setShowLiveResponse] = useState(false);
   
   const [messages, setMessages] = useState<Message[]>([
-    { id: '1', role: 'model', text: 'Olá! Sou a Nutri AI. O que você comeu hoje?' },
+    { id: '1', role: 'model', text: 'Olá! Sou a Fitcoach.ia. O que você comeu hoje?' },
     { id: '2', role: 'user', text: 'Comi uma pizza ontem à noite 🍕' },
     { id: '3', role: 'model', text: '✅ Registrado! 3 fatias: ~900 kcal.' },
     { id: '4', role: 'model', text: 'Para equilibrar hoje, que tal uma saladinha no jantar? Senão a conta não fecha! 🥗😅' }
@@ -97,7 +97,7 @@ export const LiveDemo: React.FC = () => {
                   <Sparkles size={18} />
                   </div>
                   <div>
-                  <h3 className="font-serif text-nutri-dark font-bold text-lg">Nutri AI</h3>
+                  <h3 className="font-serif text-nutri-dark font-bold text-lg">Fitcoach.ia</h3>
                   <div className="flex items-center gap-1">
                       <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                       <span className="text-xs text-gray-500">Online</span>
@@ -177,7 +177,7 @@ export const LiveDemo: React.FC = () => {
                       <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center animate-ping text-white mb-4">
                           <Phone size={32} fill="currentColor" />
                       </div>
-                      <p className="font-bold text-nutri-dark text-lg bg-white/90 px-6 py-2 rounded-full shadow-lg">Chamando Nutri...</p>
+                      <p className="font-bold text-nutri-dark text-lg bg-white/90 px-6 py-2 rounded-full shadow-lg">Chamando Fitcoach.ia...</p>
                   </div>
               )}
           </div>
@@ -229,7 +229,7 @@ export const LiveDemo: React.FC = () => {
                   </div>
 
                   <div className="text-center space-y-1">
-                      <h2 className="font-serif text-3xl font-bold text-white tracking-wide">Nutri.ai</h2>
+                      <h2 className="font-serif text-3xl font-bold text-white tracking-wide">Fitcoach.ia</h2>
                       <p className="text-green-100/80 font-medium">Assistente Pessoal</p>
                   </div>
               </div>

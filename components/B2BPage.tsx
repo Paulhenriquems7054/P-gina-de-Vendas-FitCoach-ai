@@ -20,10 +20,10 @@ export const B2BPage: React.FC = () => {
             <Building2 size={14} /> Soluções Corporativas
           </div>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-nutri-dark dark:text-white leading-tight mb-6">
-            Retenha mais alunos com o <span className="text-blue-600 dark:text-blue-400">Nutri AI</span> na sua Academia
+            Retenha mais alunos com o <span className="text-blue-600 dark:text-blue-400">Fitcoach.ia</span> na sua Academia
           </h1>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Ofereça um Nutricionista por Inteligência Artificial como benefício exclusivo. Você compra o pacote, recebe um Código Mestre e distribui para seus alunos.
+            Ofereça Nutricionista + Personal Trainer por Inteligência Artificial como benefício exclusivo. Você compra o pacote, recebe um Código Mestre e distribui para seus alunos.
           </p>
           <Button variant="primary" className="mx-auto" onClick={scrollToPlans}>
             Ver Planos Disponíveis <ChevronDown size={18} />
@@ -77,7 +77,8 @@ export const B2BPage: React.FC = () => {
             <Button variant="outline" fullWidth className="mb-8 dark:text-white dark:border-gray-600" onClick={() => handlePurchase('https://pay.cakto.com.br/dokmtqh_665805')}>Comprar Starter</Button>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> 20 Licenças Premium</li>
-              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Análise de Pratos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Análise de Pratos + Treinos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Treinos Personalizados</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Voz 15min/dia</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Código Único</li>
             </ul>
@@ -105,7 +106,8 @@ export const B2BPage: React.FC = () => {
             <Button variant="secondary" fullWidth className="mb-8 font-bold shadow-lg shadow-nutri-accent/20" onClick={() => handlePurchase('https://pay.cakto.com.br/376w2dm')}>Comprar Growth</Button>
             <ul className="space-y-3 text-sm text-white/90">
               <li className="flex items-center gap-2"><Check size={16} className="text-nutri-accent" /> 50 Licenças Premium</li>
-              <li className="flex items-center gap-2"><Check size={16} className="text-nutri-accent" /> Análise de Pratos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-nutri-accent" /> Análise de Pratos + Treinos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-nutri-accent" /> Treinos Personalizados</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-nutri-accent" /> Voz 15min/dia</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-nutri-accent" /> Suporte Prioritário</li>
             </ul>
@@ -132,7 +134,8 @@ export const B2BPage: React.FC = () => {
             <Button variant="outline" fullWidth className="mb-8 dark:text-white dark:border-gray-600" onClick={() => handlePurchase('https://pay.cakto.com.br/32bwrtw_665830')}>Comprar Pro</Button>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> 100 Licenças Premium</li>
-              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Análise de Pratos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Análise de Pratos + Treinos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Treinos Personalizados</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Voz 15min/dia</li>
               <li className="flex items-center gap-2 font-bold text-nutri-dark dark:text-white"><Check size={16} className="text-green-500" /> Menor custo/aluno</li>
             </ul>

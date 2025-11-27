@@ -10,10 +10,10 @@ export const Pricing: React.FC = () => {
   return (
     <div id="pricing" className="py-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16 reveal">
-        <h2 className="font-serif text-4xl text-nutri-dark dark:text-white font-bold mb-4 transition-colors duration-300">Quanto custa ter um Nutricionista disponível todo dia?</h2>
+        <h2 className="font-serif text-4xl text-nutri-dark dark:text-white font-bold mb-4 transition-colors duration-300">Quanto custa ter Nutricionista + Personal Trainer disponível todo dia?</h2>
         <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg transition-colors duration-300">
-          Um profissional cobraria R$ 200,00 por hora. Outros apps cobram R$ 90,00 por mês e nem falam com você.
-          <br/><span className="font-semibold text-nutri-dark dark:text-white">No Nutri AI, você tem o poder da visão computacional e voz em tempo real por um preço ridículo.</span>
+          Um Nutricionista cobra R$ 250,00 por consulta. Um Personal Trainer, R$ 150,00 por sessão. Outros apps cobram R$ 90,00 por mês e nem falam com você.
+          <br/><span className="font-semibold text-nutri-dark dark:text-white">No Fitcoach.ia, você tem Nutrição + Treinos personalizados com visão computacional e voz em tempo real por um preço ridículo.</span>
         </p>
       </div>
 
@@ -33,7 +33,11 @@ export const Pricing: React.FC = () => {
           <ul className="space-y-4 mb-8">
             <li className="flex items-center gap-3 text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 <div className="w-5 h-5 rounded-full bg-nutri-light dark:bg-gray-700 flex items-center justify-center text-nutri-dark dark:text-white shrink-0"><Check size={12} /></div>
-                Análise de Fotos Ilimitada
+                Análise de Fotos Ilimitada (Comida + Treinos)
+            </li>
+            <li className="flex items-center gap-3 text-gray-600 dark:text-gray-300 transition-colors duration-300">
+                <div className="w-5 h-5 rounded-full bg-nutri-light dark:bg-gray-700 flex items-center justify-center text-nutri-dark dark:text-white shrink-0"><Check size={12} /></div>
+                Treinos Personalizados Ilimitados
             </li>
             <li className="flex items-center gap-3 text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 <div className="w-5 h-5 rounded-full bg-nutri-light dark:bg-gray-700 flex items-center justify-center text-nutri-dark dark:text-white shrink-0"><Check size={12} /></div>
@@ -49,7 +53,7 @@ export const Pricing: React.FC = () => {
             </li>
           </ul>
           
-          <Button variant="outline" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/qg92yro_665795')} className="dark:text-white dark:border-gray-500 dark:hover:bg-gray-700">QUERO O PLANO MENSAL</Button>
+          <Button variant="outline" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/owys3oe')} className="dark:text-white dark:border-gray-500 dark:hover:bg-gray-700">QUERO O PLANO MENSAL</Button>
         </div>
 
         {/* Annual Plan (Featured) */}
@@ -94,7 +98,11 @@ export const Pricing: React.FC = () => {
           <ul className="space-y-4 mb-8">
              <li className="flex items-center gap-3 text-white font-medium">
                 <div className="w-5 h-5 rounded-full bg-nutri-accent flex items-center justify-center text-nutri-dark shrink-0"><Check size={12} /></div>
-                Análise de Fotos Ilimitada
+                Análise de Fotos Ilimitada (Comida + Treinos)
+            </li>
+            <li className="flex items-center gap-3 text-white font-medium">
+                <div className="w-5 h-5 rounded-full bg-nutri-accent flex items-center justify-center text-nutri-dark shrink-0"><Check size={12} /></div>
+                Treinos Personalizados Ilimitados
             </li>
             <li className="flex items-center gap-3 text-white font-medium">
                 <div className="w-5 h-5 rounded-full bg-nutri-accent flex items-center justify-center text-nutri-dark shrink-0"><Check size={12} /></div>
@@ -114,7 +122,7 @@ export const Pricing: React.FC = () => {
             </li>
           </ul>
           
-          <Button variant="secondary" fullWidth className="font-bold text-lg h-14" onClick={() => handlePurchase('https://pay.cakto.com.br/kk8pgvw_665010')}>QUERO O PLANO ANUAL</Button>
+          <Button variant="secondary" fullWidth className="font-bold text-lg h-14" onClick={() => handlePurchase('https://pay.cakto.com.br/owys3oe')}>QUERO O PLANO ANUAL</Button>
         </div>
 
       </div>
