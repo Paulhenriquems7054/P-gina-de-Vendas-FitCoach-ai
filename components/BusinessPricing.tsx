@@ -3,11 +3,10 @@ import { Check, Building2, Ticket, Smartphone, Zap, HelpCircle } from 'lucide-re
 import { Button } from './Button';
 
 export const BusinessPricing: React.FC = () => {
-  // Placeholder links - o usuário deve substituir pelos links reais de checkout da Cakto
   const checkoutLinks = {
-    starter: 'https://pay.cakto.com.br/checkout-starter-b2b', // Substituir pelo link real
-    growth: 'https://pay.cakto.com.br/checkout-growth-b2b',   // Substituir pelo link real
-    pro: 'https://pay.cakto.com.br/checkout-pro-b2b'          // Substituir pelo link real
+    starter: 'https://pay.cakto.com.br/cemyp2n_668537', // Pack Starter - R$ 299,90/mês
+    growth: 'https://pay.cakto.com.br/vi6djzq_668541',  // Pack Growth  - R$ 649,90/mês
+    pro: 'https://pay.cakto.com.br/3dis6ds_668546'      // Pack Pro     - R$ 1.199,90/mês
   };
 
   const handlePurchase = (link: string) => {

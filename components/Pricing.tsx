@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Check, Star, ShieldCheck, Tag } from 'lucide-react';
 import { Button } from './Button';
+import { getABTestVariant, trackABTestConversion } from '../utils/abTesting';
+import { PriceComparison } from './PriceComparison';
+import { SavingsCalculator } from './SavingsCalculator';
 
 export const Pricing: React.FC = () => {
+  const [monthlyPrice, setMonthlyPrice] = useState(34.90);
+  const [abVariant, setAbVariant] = useState<'A' | 'B'>('A');
+
+  useEffect(() => {
+    // A/B Test: Preço Mensal
+    const variant = getABTestVariant({
+      testName: 'monthly_price',
+      variants: ['A', 'B'],
+      defaultVariant: 'A',
+    });
+    
+    setAbVariant(variant);
+    
+    // Define preço baseado na variante
+    if (variant === 'A') {
+      setMonthlyPrice(34.90); // Controle
+    } else {
+      setMonthlyPrice(39.90); // Teste
+    }
+  }, []);
+
   const handlePurchase = (url: string) => {
+    // Rastreia conversão do A/B test
+    trackABTestConversion('monthly_price', 'purchase_click');
     window.location.href = url;
   };
 
@@ -17,6 +43,16 @@ export const Pricing: React.FC = () => {
         </p>
       </div>
 
+      {/* Calculadora de Economia */}
+      <div className="mb-16">
+        <SavingsCalculator />
+      </div>
+
+      {/* Comparação Visual */}
+      <div className="mb-16">
+        <PriceComparison />
+      </div>
+
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
         
         {/* Monthly Plan */}
@@ -25,9 +61,16 @@ export const Pricing: React.FC = () => {
             <span className="text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold">Para quem quer testar</span>
             <h3 className="font-serif text-3xl text-nutri-dark dark:text-white font-bold mt-2 transition-colors duration-300">Plano Mensal</h3>
             <div className="mt-4 flex items-baseline">
-              <span className="text-4xl font-bold text-gray-800 dark:text-white transition-colors duration-300">R$ 34,90</span>
+              <span className="text-4xl font-bold text-gray-800 dark:text-white transition-colors duration-300">
+                R$ {monthlyPrice.toFixed(2).replace('.', ',')}
+              </span>
               <span className="text-gray-500 dark:text-gray-400 ml-2">/mês</span>
             </div>
+            {abVariant === 'B' && (
+              <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+                <span className="line-through">R$ 34,90</span> - Ainda 56% mais barato que concorrência
+              </div>
+            )}
           </div>
           
           <ul className="space-y-4 mb-8">
@@ -71,7 +114,7 @@ export const Pricing: React.FC = () => {
             {/* Bloco de Preço VIP */}
             <div className="mt-5 p-5 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
                 <div className="text-green-200/60 text-sm decoration-slice line-through mb-1">
-                    De R$ 497,00 por:
+                    De R$ 418,80 por:
                 </div>
                 
                 <div className="flex flex-col mb-3">
@@ -91,7 +134,7 @@ export const Pricing: React.FC = () => {
             {/* Destaque de Economia */}
             <div className="mt-4 flex items-center justify-center gap-2 text-green-300 bg-green-900/40 border border-green-500/30 p-3 rounded-xl shadow-inner">
                 <Tag size={18} className="fill-green-300/20" />
-                <span className="font-bold text-sm tracking-wide">VOCÊ ECONOMIZA R$ 200,00</span>
+                <span className="font-bold text-sm tracking-wide">VOCÊ ECONOMIZA R$ 121,80</span>
             </div>
           </div>
           

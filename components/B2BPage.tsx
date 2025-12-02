@@ -54,8 +54,47 @@ export const B2BPage: React.FC = () => {
 
       {/* 3. Preços */}
       <section id="b2b-plans" className="py-10 px-6 max-w-7xl mx-auto mb-20">
-        <div className="grid md:grid-cols-3 gap-6 items-start">
+        <div className="grid md:grid-cols-4 gap-6 items-start">
           
+          {/* STARTER MINI - NOVO */}
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-lg border-2 border-green-500 dark:border-green-500 relative flex flex-col reveal delay-50">
+            <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">
+              NOVO
+            </div>
+            <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Starter Mini</div>
+            <h3 className="font-serif text-2xl text-nutri-dark dark:text-white font-bold mb-4">Pack Starter Mini</h3>
+            
+            <div className="mb-6">
+              <span className="text-3xl font-bold text-nutri-dark dark:text-white">R$ 149,90</span>
+              <span className="text-gray-500 text-sm">/mês</span>
+            </div>
+
+            {/* Destaque Custo por Aluno Enfático */}
+            <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-xl border-2 border-dashed border-green-300 dark:border-green-500/50 mb-6 text-center relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-8 h-8 bg-green-100 dark:bg-green-900/50 rounded-bl-xl -mr-2 -mt-2"></div>
+              <div className="absolute bottom-0 left-0 w-8 h-8 bg-green-100 dark:bg-green-900/50 rounded-tr-xl -ml-2 -mb-2"></div>
+              <p className="text-xs uppercase font-extrabold text-green-600 dark:text-green-400 mb-1 tracking-wider">Custo por aluno</p>
+              <p className="text-2xl font-black text-green-600 dark:text-green-400">R$ 14,99</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Ideal para testar</p>
+            </div>
+
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600 border-green-500 hover:bg-green-50 dark:hover:bg-green-900/20"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/3b2kpwc_671196')}
+            >
+              Comprar Starter Mini
+            </Button>
+            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> 10 Licenças Premium</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Análise de Pratos + Treinos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Treinos Personalizados</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Voz 15min/dia</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Upgrade fácil para Starter</li>
+            </ul>
+          </div>
+
           {/* STARTER */}
           <div className="bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col reveal delay-100">
             <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Starter</div>
@@ -74,7 +113,14 @@ export const B2BPage: React.FC = () => {
                 <p className="text-2xl font-black text-blue-600 dark:text-blue-400">R$ 14,99</p>
             </div>
 
-            <Button variant="outline" fullWidth className="mb-8 dark:text-white dark:border-gray-600" onClick={() => handlePurchase('https://pay.cakto.com.br/dokmtqh_665805')}>Comprar Starter</Button>
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/cemyp2n_668537')}
+            >
+              Comprar Starter
+            </Button>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> 20 Licenças Premium</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Análise de Pratos + Treinos</li>
@@ -103,7 +149,14 @@ export const B2BPage: React.FC = () => {
                 <p className="text-3xl font-black text-white">R$ 12,99</p>
             </div>
 
-            <Button variant="secondary" fullWidth className="mb-8 font-bold shadow-lg shadow-nutri-accent/20" onClick={() => handlePurchase('https://pay.cakto.com.br/376w2dm')}>Comprar Growth</Button>
+            <Button
+              variant="secondary"
+              fullWidth
+              className="mb-8 font-bold shadow-lg shadow-nutri-accent/20"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/vi6djzq_668541')}
+            >
+              Comprar Growth
+            </Button>
             <ul className="space-y-3 text-sm text-white/90">
               <li className="flex items-center gap-2"><Check size={16} className="text-nutri-accent" /> 50 Licenças Premium</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-nutri-accent" /> Análise de Pratos + Treinos</li>
@@ -131,7 +184,14 @@ export const B2BPage: React.FC = () => {
                 <p className="text-2xl font-black text-blue-600 dark:text-blue-400">R$ 11,99</p>
             </div>
 
-            <Button variant="outline" fullWidth className="mb-8 dark:text-white dark:border-gray-600" onClick={() => handlePurchase('https://pay.cakto.com.br/32bwrtw_665830')}>Comprar Pro</Button>
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/3dis6ds_668546')}
+            >
+              Comprar Pro
+            </Button>
             <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> 100 Licenças Premium</li>
               <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Análise de Pratos + Treinos</li>
