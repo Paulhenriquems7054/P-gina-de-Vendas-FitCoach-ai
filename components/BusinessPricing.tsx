@@ -64,6 +64,9 @@ export const BusinessPricing: React.FC = () => {
               <span className="text-3xl font-bold text-nutri-dark dark:text-white">R$ 299,90</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <div className="text-xs text-gray-400 mt-1">Equivale a R$ 14,99 por aluno</div>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total por cobrança no checkout: <span className="font-semibold">R$ 300,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+              </p>
             </div>
 
             <Button variant="outline" fullWidth onClick={() => handlePurchase(checkoutLinks.starter)} className="mb-6 border-gray-300 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700">
@@ -92,6 +95,9 @@ export const BusinessPricing: React.FC = () => {
               <span className="text-4xl font-bold text-white">R$ 649,90</span>
               <span className="text-green-200/60 text-sm">/mês</span>
               <div className="text-xs text-green-200/80 mt-1">Equivale a R$ 12,99 por aluno</div>
+              <p className="mt-1 text-[11px] text-green-100">
+                Valor total por cobrança no checkout: <span className="font-semibold">R$ 650,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+              </p>
             </div>
 
             <Button variant="secondary" fullWidth onClick={() => handlePurchase(checkoutLinks.growth)} className="mb-6 font-bold shadow-lg shadow-nutri-accent/20">
@@ -117,6 +123,9 @@ export const BusinessPricing: React.FC = () => {
               <span className="text-3xl font-bold text-nutri-dark dark:text-white">R$ 1.199,90</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <div className="text-xs text-gray-400 mt-1">Equivale a R$ 11,99 por aluno</div>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total por cobrança no checkout: <span className="font-semibold">R$ 1.200,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+              </p>
             </div>
 
             <Button variant="outline" fullWidth onClick={() => handlePurchase(checkoutLinks.pro)} className="mb-6 border-gray-300 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700">

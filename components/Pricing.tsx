@@ -8,6 +8,7 @@ import { SavingsCalculator } from './SavingsCalculator';
 export const Pricing: React.FC = () => {
   const [monthlyPrice, setMonthlyPrice] = useState(34.90);
   const [abVariant, setAbVariant] = useState<'A' | 'B'>('A');
+  const serviceFee = 0.99;
 
   useEffect(() => {
     // A/B Test: Preço Mensal
@@ -66,6 +67,13 @@ export const Pricing: React.FC = () => {
               </span>
               <span className="text-gray-500 dark:text-gray-400 ml-2">/mês</span>
             </div>
+            <div className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+              Valor total por cobrança no checkout:{" "}
+              <span className="font-semibold">
+                R$ {(monthlyPrice + serviceFee).toFixed(2).replace('.', ',')}
+              </span>{" "}
+              (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+            </div>
             {abVariant === 'B' && (
               <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
                 <span className="line-through">R$ 34,90</span> - Ainda 56% mais barato que concorrência
@@ -120,6 +128,12 @@ export const Pricing: React.FC = () => {
                 <div className="flex flex-col mb-3">
                   <div className="text-5xl font-bold text-nutri-accent tracking-tight">R$ 297,00</div>
                   <div className="text-white font-medium text-lg -mt-1">à vista</div>
+                </div>
+
+                <div className="text-[11px] text-green-100 mt-1">
+                  Valor total no checkout:{" "}
+                  <span className="font-semibold">R$ 297,99</span>{" "}
+                  (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
                 </div>
                 
                 <div className="w-full h-px bg-white/10 my-3"></div>

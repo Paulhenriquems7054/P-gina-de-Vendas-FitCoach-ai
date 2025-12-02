@@ -108,6 +108,9 @@ export const PersonalTrainerPage: React.FC = () => {
             <div className="mb-6">
               <span className="text-4xl font-bold text-nutri-dark dark:text-white">R$ 99,90</span>
               <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total por cobrança no checkout: <span className="font-semibold">R$ 100,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+              </p>
             </div>
 
             {/* Destaque Custo por Aluno */}
@@ -141,6 +144,9 @@ export const PersonalTrainerPage: React.FC = () => {
             <div className="mb-6">
               <span className="text-5xl font-bold text-white">R$ 249,90</span>
               <span className="text-orange-200/60 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-orange-100/80">
+                Valor total por cobrança no checkout: <span className="font-semibold">R$ 250,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+              </p>
             </div>
 
             {/* Destaque Custo por Aluno */}

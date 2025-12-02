@@ -67,6 +67,9 @@ export const B2BPage: React.FC = () => {
             <div className="mb-6">
               <span className="text-3xl font-bold text-nutri-dark dark:text-white">R$ 149,90</span>
               <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total por cobrança no checkout: <span className="font-semibold">R$ 150,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+              </p>
             </div>
 
             {/* Destaque Custo por Aluno Enfático */}
@@ -103,6 +106,9 @@ export const B2BPage: React.FC = () => {
             <div className="mb-6">
               <span className="text-3xl font-bold text-nutri-dark dark:text-white">R$ 299,90</span>
               <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total por cobrança no checkout: <span className="font-semibold">R$ 300,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+              </p>
             </div>
 
             {/* Destaque Custo por Aluno Enfático */}
@@ -141,6 +147,9 @@ export const B2BPage: React.FC = () => {
             <div className="mb-6">
               <span className="text-4xl font-bold text-white">R$ 649,90</span>
               <span className="text-green-200/60 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-green-200/80">
+                Valor total por cobrança no checkout: <span className="font-semibold">R$ 650,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+              </p>
             </div>
 
              {/* Destaque Custo por Aluno Enfático */}
@@ -174,6 +183,9 @@ export const B2BPage: React.FC = () => {
             <div className="mb-6">
               <span className="text-3xl font-bold text-nutri-dark dark:text-white">R$ 1.199,90</span>
               <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total por cobrança no checkout: <span className="font-semibold">R$ 1.200,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
+              </p>
             </div>
 
              {/* Destaque Custo por Aluno Enfático */}
