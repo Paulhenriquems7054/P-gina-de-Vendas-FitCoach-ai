@@ -6,7 +6,6 @@ import { BusinessPricing } from './components/BusinessPricing';
 import { Button } from './components/Button';
 import { B2BPage } from './components/B2BPage';
 import { RechargePage } from './components/RechargePage';
-import { PersonalTrainerPage } from './components/PersonalTrainerPage';
 import { Logo } from './components/Logo';
 
 // Interface atualizada para receber navigateTo
@@ -15,7 +14,7 @@ interface HomeContentProps {
   faqs: any[];
   openFaqIndex: number | null;
   toggleFaq: (i: number) => void;
-  navigateTo: (page: 'home' | 'b2b' | 'recharge' | 'personais') => void;
+  navigateTo: (page: 'home' | 'b2b' | 'recharge') => void;
 }
 
 // Componente Interno com o conteúdo da Landing Page Original
@@ -61,11 +60,13 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
               A primeira Inteligência Artificial completa que vê o que você come, cria seus treinos personalizados e conversa com você em tempo real por voz. Nutrição + Treinos em um só lugar. Sem digitar, sem planilhas chatas, sem julgamentos.
             </h2>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="shadow-green-900/20 py-5 text-lg" onClick={() => scrollToSection('pricing')}>
-                QUERO MEU FITCOACH.IA AGORA
+              <Button className="shadow-green-900/20 py-5 text-lg" onClick={() => navigateTo('b2b')}>
+                QUERO O FITCOACH.IA NA MINHA ACADEMIA
               </Button>
             </div>
-            <p className="mt-4 text-xs text-gray-500 dark:text-gray-400 ml-2 transition-colors duration-300">Acesso imediato por menos de R$ 1,00 por dia</p>
+            <p className="mt-4 text-xs text-gray-500 dark:text-gray-400 ml-2 transition-colors duration-300">
+              Solução completa de IA para academias aumentarem resultado e retenção de alunos
+            </p>
           </div>
 
           <div className="relative z-10 flex justify-center lg:justify-end scale-90 md:scale-100">
@@ -190,7 +191,7 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
             </div>
             
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-               Você tem uma <span className="text-blue-400">Academia</span> ou é <span className="text-blue-400">Personal</span>?
+               Você tem uma <span className="text-blue-400">Academia</span>?
             </h2>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto">
@@ -273,8 +274,9 @@ const App: React.FC = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
   const hasAnimatedOnLoad = useRef(false);
 
-  // Simple State-based Router: 'home' | 'b2b' | 'recharge' | 'personais'
-  const [activePage, setActivePage] = useState<'home' | 'b2b' | 'recharge' | 'personais'>('home');
+  // Simple State-based Router: 'home' | 'b2b' | 'recharge'
+  // Foco de vendas principal: Academias (B2B) como página inicial
+  const [activePage, setActivePage] = useState<'home' | 'b2b' | 'recharge'>('b2b');
 
   // Function to trigger the magic logo reveal
   const triggerLogoAnimation = () => {
@@ -305,7 +307,6 @@ const App: React.FC = () => {
     const path = window.location.pathname;
     if (path === '/empresas') setActivePage('b2b');
     else if (path === '/recarga') setActivePage('recharge');
-    else if (path === '/personais') setActivePage('personais');
 
     // Trigger Animation ONLY ONCE on mount
     if (!hasAnimatedOnLoad.current) {
@@ -398,7 +399,7 @@ const App: React.FC = () => {
     }
   };
 
-  const navigateTo = (page: 'home' | 'b2b' | 'recharge' | 'personais') => {
+  const navigateTo = (page: 'home' | 'b2b' | 'recharge') => {
     setActivePage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setIsMenuOpen(false);
@@ -496,16 +497,6 @@ const App: React.FC = () => {
                   Academias
                 </button>
                 <button 
-                  onClick={() => navigateTo('personais')} 
-                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
-                    activePage === 'personais' 
-                      ? 'text-nutri-dark dark:text-white bg-gray-100 dark:bg-gray-800 font-semibold' 
-                      : 'text-gray-600 dark:text-gray-300 hover:text-nutri-dark dark:hover:text-white'
-                  }`}
-                >
-                  Para Personais
-                </button>
-                <button 
                   onClick={() => navigateTo('recharge')} 
                   className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
                     activePage === 'recharge' 
@@ -533,9 +524,9 @@ const App: React.FC = () => {
                 <Button 
                   variant="primary" 
                   className="py-2 px-4 text-sm font-semibold" 
-                  onClick={() => scrollToSection('pricing')}
+                  onClick={() => navigateTo('b2b')}
                 >
-                  Começar Agora
+                  Planos para Academias
                 </Button>
               </div>
             </div>
@@ -595,11 +586,11 @@ const App: React.FC = () => {
                 </button>
 
                 <button 
-                    onClick={() => scrollToSection('pricing')}
+                    onClick={() => navigateTo('b2b')}
                     className="p-2 md:px-4 md:py-2 hover:bg-white/10 rounded-full transition-colors flex items-center gap-2 group"
                 >
                     <CreditCard size={20} className="group-hover:text-green-300 transition-colors" />
-                    <span className="hidden md:inline text-sm font-medium">Preços</span>
+                    <span className="hidden md:inline text-sm font-medium">Planos Academia</span>
                 </button>
               </>
           )}
@@ -613,14 +604,6 @@ const App: React.FC = () => {
             title="Para Academias"
           >
             <Building2 size={20} className={`transition-colors ${activePage === 'b2b' ? 'text-nutri-accent' : 'text-white group-hover:text-nutri-accent'}`} />
-          </button>
-
-          <button 
-            onClick={() => navigateTo('personais')}
-            className={`p-2 hover:bg-white/10 rounded-full transition-colors group flex items-center gap-2 ${activePage === 'personais' ? 'bg-white/10 text-white' : ''}`}
-            title="Para Personais"
-          >
-            <Dumbbell size={20} className={`transition-colors ${activePage === 'personais' ? 'text-orange-400' : 'text-white group-hover:text-orange-400'}`} />
           </button>
 
            <button 
@@ -640,9 +623,8 @@ const App: React.FC = () => {
           <div className="flex flex-col gap-6 text-xl font-serif text-nutri-dark dark:text-white text-center">
             <button onClick={() => { navigateTo('home'); setIsMenuOpen(false); }}>Início</button>
             <button onClick={() => { navigateTo('b2b'); setIsMenuOpen(false); }}>Para Academias</button>
-            <button onClick={() => { navigateTo('personais'); setIsMenuOpen(false); }}>Para Personais</button>
             <button onClick={() => { navigateTo('recharge'); setIsMenuOpen(false); }}>Recarga</button>
-            <button onClick={() => scrollToSection('pricing')}>Planos</button>
+            <button onClick={() => { navigateTo('b2b'); setIsMenuOpen(false); }}>Planos para Academias</button>
             <button onClick={() => scrollToSection('faq')}>Dúvidas</button>
           </div>
         </div>
@@ -652,7 +634,6 @@ const App: React.FC = () => {
       <main className="min-h-[60vh]">
           {activePage === 'home' && <HomeContent scrollToSection={scrollToSection} faqs={faqs} openFaqIndex={openFaqIndex} toggleFaq={toggleFaq} navigateTo={navigateTo} />}
           {activePage === 'b2b' && <B2BPage />}
-          {activePage === 'personais' && <PersonalTrainerPage />}
           {activePage === 'recharge' && <RechargePage />}
       </main>
 
@@ -669,14 +650,9 @@ const App: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-6 text-green-100/60 mb-8 text-sm">
                <button onClick={() => navigateTo('home')} className="hover:text-white transition-colors">Home</button>
                <button onClick={() => navigateTo('b2b')} className="hover:text-white transition-colors">Para Academias</button>
-               <button onClick={() => navigateTo('personais')} className="hover:text-white transition-colors">Para Personais</button>
                <button onClick={() => navigateTo('recharge')} className="hover:text-white transition-colors">Recarregar Créditos</button>
                <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
                <a href="#" className="hover:text-white transition-colors">Contato: suporte@fitcoach.ia</a>
-            </div>
-
-            <div className="text-green-100/40 text-sm">
-              © 2025 Fitcoach.ia. Todos os direitos reservados.
             </div>
         </div>
       </footer>
