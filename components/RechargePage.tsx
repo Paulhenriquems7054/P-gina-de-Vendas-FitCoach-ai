@@ -28,12 +28,12 @@ export const RechargePage: React.FC = () => {
       <section className="pb-20 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-6">
           
-          {/* Opção 1: Turbo */}
+          {/* Opção 1: Ajuda Rápida */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 hover:border-orange-300 transition-all group reveal delay-100 relative">
             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-4 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
               <Zap size={24} />
             </div>
-            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Sessão Turbo</h3>
+            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Ajuda Rápida</h3>
             <p className="text-xs text-orange-600 dark:text-orange-400 font-bold uppercase mb-4">Urgência</p>
             
             <div className="mb-4">
@@ -45,7 +45,7 @@ export const RechargePage: React.FC = () => {
             </div>
 
             <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded-xl mb-6 text-sm">
-              <p className="font-bold text-nutri-dark dark:text-white mb-1">+30 Minutos de Voz</p>
+              <p className="font-bold text-nutri-dark dark:text-white mb-1">+20 Minutos de Voz</p>
               <p className="text-gray-500 dark:text-gray-400 text-xs">Válido por 24h. Ideal para terminar sua conversa agora.</p>
             </div>
 
@@ -58,7 +58,7 @@ export const RechargePage: React.FC = () => {
             </Button>
           </div>
 
-          {/* Opção 2: Banco 100 */}
+          {/* Opção 2: Minutos de Reserva */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-xl border-2 border-nutri-dark dark:border-green-500 relative transform md:-translate-y-2 reveal delay-300">
             <div className="absolute top-0 right-0 bg-nutri-dark dark:bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl flex items-center gap-1">
               MELHOR ESCOLHA
@@ -66,7 +66,7 @@ export const RechargePage: React.FC = () => {
             <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4 text-green-600 dark:text-green-400">
               <Clock size={24} />
             </div>
-            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Banco de Voz 100</h3>
+            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Minutos de Reserva</h3>
             <p className="text-xs text-green-600 dark:text-green-400 font-bold uppercase mb-4">Custo-Benefício</p>
             
             <div className="mb-4">
@@ -87,16 +87,16 @@ export const RechargePage: React.FC = () => {
               fullWidth 
               onClick={() => handlePurchase('https://pay.cakto.com.br/hhxugxb_668446')}
             >
-              Comprar Banco de Voz
+              Comprar Minutos de Reserva
             </Button>
           </div>
 
-          {/* Opção 3: Passe Livre */}
+          {/* Opção 3: Conversa Ilimitada */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 hover:border-purple-300 transition-all group reveal delay-500 relative">
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
               <Infinity size={24} />
             </div>
-            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Passe Livre 30 Dias</h3>
+            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Conversa Ilimitada</h3>
             <p className="text-xs text-purple-600 dark:text-purple-400 font-bold uppercase mb-4">VIP</p>
             
             <div className="mb-4">

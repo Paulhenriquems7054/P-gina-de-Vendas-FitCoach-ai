@@ -47,7 +47,7 @@ export const B2BPage: React.FC = () => {
           <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-all reveal delay-500">
             <div className="w-14 h-14 bg-blue-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/20"><Smartphone size={28}/></div>
             <h3 className="font-serif text-xl font-bold text-nutri-dark dark:text-white mb-3">Alunos Ativam</h3>
-            <p className="text-gray-600 dark:text-gray-400">Seu aluno baixa o app, insere o código e ganha acesso Premium imediato enquanto estiver matriculado.</p>
+            <p className="text-gray-600 dark:text-gray-400">Seu aluno acessa o app pelo link, insere o código e ganha acesso Premium imediato enquanto estiver matriculado.</p>
           </div>
         </div>
       </section>

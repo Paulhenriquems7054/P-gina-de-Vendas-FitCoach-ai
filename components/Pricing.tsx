@@ -54,6 +54,16 @@ export const Pricing: React.FC = () => {
         <PriceComparison />
       </div>
 
+      {/* Planos Premium */}
+      <div className="mb-16 text-center">
+        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg transition-colors duration-300">
+          Escolha o plano Premium que faz mais sentido para você:{" "}
+          <span className="font-semibold text-nutri-dark dark:text-white">
+            mensal para testar com calma ou anual para economizar forte.
+          </span>
+        </p>
+      </div>
+
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
         
         {/* Monthly Plan */}
@@ -148,7 +158,7 @@ export const Pricing: React.FC = () => {
             {/* Destaque de Economia */}
             <div className="mt-4 flex items-center justify-center gap-2 text-green-300 bg-green-900/40 border border-green-500/30 p-3 rounded-xl shadow-inner">
                 <Tag size={18} className="fill-green-300/20" />
-                <span className="font-bold text-sm tracking-wide">VOCÊ ECONOMIZA R$ 121,80</span>
+                <span className="font-bold text-sm tracking-wide">VOCÊ ECONOMIZA R$ 200,00</span>
             </div>
           </div>
           
