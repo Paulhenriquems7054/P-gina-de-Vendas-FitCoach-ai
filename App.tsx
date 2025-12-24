@@ -289,8 +289,8 @@ const App: React.FC = () => {
   const hasAnimatedOnLoad = useRef(false);
 
   // Simple State-based Router: 'home' | 'b2b' | 'recharge' | 'personal'
-  // Foco de vendas principal: Home como página inicial para mostrar todos os botões
-  const [activePage, setActivePage] = useState<'home' | 'b2b' | 'recharge' | 'personal'>('home');
+  // Foco de vendas principal: Academias (B2B) como página inicial
+  const [activePage, setActivePage] = useState<'home' | 'b2b' | 'recharge' | 'personal'>('b2b');
 
   // Function to trigger the magic logo reveal
   const triggerLogoAnimation = () => {
@@ -420,6 +420,44 @@ const App: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  const scrollToPlan = (planId: string) => {
+    setIsMenuOpen(false);
+    if (activePage !== 'b2b') {
+      setActivePage('b2b');
+      setTimeout(() => {
+        const element = document.getElementById(planId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          // Se não encontrar o elemento, scrolla para o topo
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 200);
+    } else {
+      const element = document.getElementById(planId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  };
+
+  const navigateToPersonalPlans = () => {
+    setIsMenuOpen(false);
+    setActivePage('personal');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      const element = document.getElementById('plans-personal');
+      if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200);
+  };
+
+  const handleDirectPurchase = (url: string) => {
+    setIsMenuOpen(false);
+    window.location.href = url;
+  };
+
   const faqs = [
     {
       question: "Preciso cadastrar cartão no teste?",
@@ -472,27 +510,8 @@ const App: React.FC = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1">
-              {/* Links da Home */}
+              {/* Links principais – foco em Academias */}
               <div className="flex items-center gap-1 mr-2">
-                <button 
-                  onClick={() => { navigateTo('home'); setTimeout(() => scrollToSection('problem'), 100); }} 
-                  className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-nutri-dark dark:hover:text-white transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-                >
-                  O Problema
-                </button>
-                <button 
-                  onClick={() => { navigateTo('home'); setTimeout(() => scrollToSection('solution'), 100); }} 
-                  className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-nutri-dark dark:hover:text-white transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-                >
-                  A Solução
-                </button>
-              </div>
-
-              {/* Separador */}
-              <div className="w-px h-6 bg-gray-300 dark:bg-gray-600 mx-2"></div>
-
-              {/* Links de Páginas */}
-              <div className="flex items-center gap-1">
                 <button 
                   onClick={() => navigateTo('b2b')} 
                   className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
@@ -501,7 +520,7 @@ const App: React.FC = () => {
                       : 'text-gray-600 dark:text-gray-300 hover:text-nutri-dark dark:hover:text-white'
                   }`}
                 >
-                  Academias
+                  Para Academias
                 </button>
                 <button 
                   onClick={() => navigateTo('recharge')} 
@@ -512,16 +531,6 @@ const App: React.FC = () => {
                   }`}
                 >
                   Recarga
-                </button>
-                <button 
-                  onClick={() => navigateTo('personal')} 
-                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
-                    activePage === 'personal' 
-                      ? 'text-nutri-dark dark:text-white bg-gray-100 dark:bg-gray-800 font-semibold' 
-                      : 'text-gray-600 dark:text-gray-300 hover:text-nutri-dark dark:hover:text-white'
-                  }`}
-                >
-                  Personal Trainers
                 </button>
               </div>
 
@@ -568,56 +577,22 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      {/* Floating Bottom Nav */}
+      {/* Floating Bottom Nav – foco em Academias */}
       <div className={`fixed bottom-6 left-1/2 z-[100] w-max max-w-[95vw] pointer-events-none transition-all duration-500 cubic-bezier(0.175, 0.885, 0.32, 1.275) ${
          showFloatingNav ? 'translate-y-0 -translate-x-1/2 opacity-100 scale-100' : 'translate-y-24 -translate-x-1/2 opacity-0 scale-95'
       }`}>
         <nav className="pointer-events-auto bg-nutri-dark/95 dark:bg-gray-800/95 backdrop-blur-xl text-white/80 p-2 pl-6 pr-2 rounded-full shadow-2xl border border-white/10 flex items-center gap-1 md:gap-2">
           {/* Início - sempre visível */}
           <button 
-            onClick={() => navigateTo('home')}
-            className={`p-2 md:px-4 md:py-2 hover:bg-white/10 rounded-full transition-colors group flex items-center gap-2 ${activePage === 'home' ? 'bg-white/10 text-white' : ''}`}
+            onClick={() => navigateTo('b2b')}
+            className={`p-2 md:px-4 md:py-2 hover:bg-white/10 rounded-full transition-colors group flex items-center gap-2 ${activePage === 'b2b' ? 'bg-white/10 text-white' : ''}`}
             title="Início"
           >
             <Home size={20} className="text-white group-hover:text-nutri-accent transition-colors" />
             <span className="text-sm font-medium text-white">Início</span>
           </button>
 
-          {/* Seções da Home - apenas quando estiver na home */}
-          {activePage === 'home' && (
-              <>
-                <div className="w-px h-6 bg-white/20 mx-1"></div>
-                
-                <button 
-                    onClick={() => scrollToSection('problem')}
-                    className="p-2 md:px-4 md:py-2 hover:bg-white/10 rounded-full transition-colors flex items-center gap-2 group"
-                    title="Problema"
-                >
-                    <AlertCircle size={20} className="text-white group-hover:text-red-300 transition-colors" />
-                    <span className="text-sm font-medium text-white">Problema</span>
-                </button>
-
-                <button 
-                    onClick={() => scrollToSection('solution')}
-                    className="p-2 md:px-4 md:py-2 hover:bg-white/10 rounded-full transition-colors flex items-center gap-2 group"
-                    title="Solução"
-                >
-                    <Sparkles size={20} className="text-white group-hover:text-nutri-accent transition-colors" />
-                    <span className="text-sm font-medium text-white">Solução</span>
-                </button>
-
-                <button 
-                    onClick={() => scrollToSection('pricing')}
-                    className="p-2 md:px-4 md:py-2 hover:bg-white/10 rounded-full transition-colors flex items-center gap-2 group"
-                    title="Preços"
-                >
-                    <CreditCard size={20} className="text-white group-hover:text-green-300 transition-colors" />
-                    <span className="text-sm font-medium text-white">Preços</span>
-                </button>
-              </>
-          )}
-
-          {/* Separador - sempre visível entre seções e páginas */}
+          {/* Separador - entre início e ícones de páginas */}
           <div className="w-px h-6 bg-white/20 mx-1"></div>
 
           {/* Navegação de Páginas - sempre visível, apenas ícones */}
@@ -627,14 +602,6 @@ const App: React.FC = () => {
             title="Para Academias"
           >
             <Building2 size={20} className={`transition-colors ${activePage === 'b2b' ? 'text-nutri-accent' : 'text-white hover:text-nutri-accent'}`} />
-          </button>
-
-          <button 
-            onClick={() => navigateTo('personal')}
-            className={`p-2 hover:bg-white/10 rounded-full transition-colors flex items-center justify-center ${activePage === 'personal' ? 'bg-white/10' : ''}`}
-            title="Para Personais"
-          >
-            <Dumbbell size={20} className={`transition-colors ${activePage === 'personal' ? 'text-orange-400' : 'text-white hover:text-orange-400'}`} />
           </button>
 
           <button 
@@ -649,16 +616,137 @@ const App: React.FC = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && !showFloatingNav && (
-        <div className="fixed inset-0 z-30 bg-nutri-bg dark:bg-gray-900 pt-24 px-6 md:hidden animate-fade-in transition-colors duration-300">
-          <div className="flex flex-col gap-6 text-xl font-serif text-nutri-dark dark:text-white text-center">
-            <button onClick={() => { navigateTo('home'); setIsMenuOpen(false); }}>Início</button>
-            <button onClick={() => { navigateTo('b2b'); setIsMenuOpen(false); }}>Para Academias</button>
-            <button onClick={() => { navigateTo('personal'); setIsMenuOpen(false); }}>Personal Trainers</button>
-            <button onClick={() => { navigateTo('recharge'); setIsMenuOpen(false); }}>Recarga</button>
-            <button onClick={() => scrollToSection('faq')}>Dúvidas</button>
+      {isMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 z-[45] bg-black/50 backdrop-blur-sm md:hidden"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          {/* Menu Content */}
+          <div className="fixed inset-0 z-[50] bg-nutri-bg dark:bg-gray-900 pt-20 px-6 md:hidden overflow-y-auto pb-20">
+            {/* Close Button */}
+            <div className="flex justify-end mb-4">
+              <button 
+                onClick={() => setIsMenuOpen(false)}
+                className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-nutri-dark dark:text-white"
+                aria-label="Fechar menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            <div className="flex flex-col gap-4 text-base font-serif text-nutri-dark dark:text-white">
+            {/* Navegação Principal */}
+            <div className="border-b border-gray-200 dark:border-gray-700 pb-4 mb-4">
+              <button className="w-full text-left py-2 font-bold text-lg" onClick={() => { navigateTo('b2b'); }}>Início</button>
+              <button className="w-full text-left py-2" onClick={() => { navigateTo('personal'); }}>Para Personais</button>
+              <button className="w-full text-left py-2" onClick={() => { navigateTo('recharge'); }}>Recarga</button>
+            </div>
+
+            {/* Planos para Academias */}
+            <div className="mb-4">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Planos para Academias</h3>
+              <div className="flex flex-col gap-2 text-sm">
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
+                  onClick={() => scrollToPlan('b2b-plans')}
+                >
+                  <span>Starter Mini - R$ 149,90/mês</span>
+                  <ArrowRight size={16} className="text-gray-400" />
+                </button>
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
+                  onClick={() => scrollToPlan('b2b-plans')}
+                >
+                  <span>Starter - R$ 299,90/mês</span>
+                  <ArrowRight size={16} className="text-gray-400" />
+                </button>
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
+                  onClick={() => scrollToPlan('b2b-plans')}
+                >
+                  <span>Growth - R$ 649,90/mês</span>
+                  <span className="text-xs bg-nutri-accent text-nutri-dark px-2 py-0.5 rounded-full font-bold">MAIS VENDIDO</span>
+                </button>
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
+                  onClick={() => scrollToPlan('b2b-plans')}
+                >
+                  <span>Pro - R$ 1.199,90/mês</span>
+                  <ArrowRight size={16} className="text-gray-400" />
+                </button>
+              </div>
+            </div>
+
+            {/* Planos Individuais de IA para Alunos */}
+            <div className="mb-4">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Planos Individuais (Alunos)</h3>
+              <div className="flex flex-col gap-2 text-sm">
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
+                  onClick={() => scrollToPlan('student-plans')}
+                >
+                  <span>Mensal - R$ 34,90/mês</span>
+                  <ArrowRight size={16} className="text-gray-400" />
+                </button>
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
+                  onClick={() => scrollToPlan('student-plans')}
+                >
+                  <span>Anual VIP - R$ 297,00</span>
+                  <span className="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full font-bold">ECONOMIA</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Planos para Personal Trainers */}
+            <div className="mb-4">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Planos para Personais</h3>
+              <div className="flex flex-col gap-2 text-sm">
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
+                  onClick={navigateToPersonalPlans}
+                >
+                  <span>Team 5 - R$ 99,90/mês</span>
+                  <ArrowRight size={16} className="text-gray-400" />
+                </button>
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
+                  onClick={navigateToPersonalPlans}
+                >
+                  <span>Team 15 - R$ 249,90/mês</span>
+                  <span className="text-xs bg-orange-500 text-white px-2 py-0.5 rounded-full font-bold">MAIS VANTAJOSO</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Recargas */}
+            <div className="mb-4">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Recargas de IA</h3>
+              <div className="flex flex-col gap-2 text-sm">
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  onClick={() => { navigateTo('recharge'); }}
+                >
+                  Ajuda Rápida - R$ 5,00
+                </button>
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  onClick={() => { navigateTo('recharge'); }}
+                >
+                  Minutos de Reserva - R$ 12,90
+                </button>
+                <button 
+                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  onClick={() => { navigateTo('recharge'); }}
+                >
+                  Conversa Ilimitada - R$ 19,90
+                </button>
+              </div>
+            </div>
+            </div>
           </div>
-        </div>
+        </>
       )}
 
       {/* RENDER ACTIVE PAGE */}
@@ -680,9 +768,7 @@ const App: React.FC = () => {
             </div>
             
             <div className="flex flex-wrap justify-center gap-6 text-green-100/60 mb-8 text-sm">
-               <button onClick={() => navigateTo('home')} className="hover:text-white transition-colors">Home</button>
                <button onClick={() => navigateTo('b2b')} className="hover:text-white transition-colors">Para Academias</button>
-               <button onClick={() => navigateTo('personal')} className="hover:text-white transition-colors">Personal Trainers</button>
                <button onClick={() => navigateTo('recharge')} className="hover:text-white transition-colors">Recarregar Créditos</button>
                <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
                <a href="#" className="hover:text-white transition-colors">Contato: suporte@fitcoach.ia</a>

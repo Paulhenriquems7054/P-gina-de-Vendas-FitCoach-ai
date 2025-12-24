@@ -90,20 +90,25 @@ export const PersonalTrainerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. Planos e Preços */}
+      {/* 4. Planos e Preços – Plataforma para Personal Trainers */}
       <section id="plans-personal" className="py-10 px-6 max-w-5xl mx-auto mb-20">
         <div className="text-center mb-12 reveal">
-            <h2 className="font-serif text-3xl font-bold text-nutri-dark dark:text-white">Escolha seu Time</h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">Comece pequeno e cresça conforme sua consultoria escala.</p>
+            <h2 className="font-serif text-3xl font-bold text-nutri-dark dark:text-white">Planos de Plataforma para Personal Trainers</h2>
+            <p className="text-gray-600 dark:text-gray-400 mt-2">
+              Você contrata a plataforma para organizar seus alunos. Cada aluno, se quiser continuar usando a IA após o trial,
+              contrata o próprio plano individual direto no app.
+            </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           
-          {/* CARD 1: TEAM 5 */}
+          {/* CARD 1: TEAM 5 – Plataforma para até ~5 alunos ativos */}
           <div className="bg-white dark:bg-gray-800 p-8 rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-700 relative hover:border-orange-300 transition-colors reveal delay-200">
             <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Iniciante</div>
             <h3 className="font-serif text-3xl text-nutri-dark dark:text-white font-bold mb-2">Team 5</h3>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mb-6">Para quem está começando na consultoria.</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-6">
+              Para quem está começando na consultoria online e quer estruturar o acompanhamento de até ~5 alunos.
+            </p>
             
             <div className="mb-6">
               <span className="text-4xl font-bold text-nutri-dark dark:text-white">R$ 99,90</span>
@@ -113,33 +118,39 @@ export const PersonalTrainerPage: React.FC = () => {
               </p>
             </div>
 
-            {/* Destaque Custo por Aluno */}
-            <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 mb-6 text-center">
-                <p className="text-[10px] uppercase font-bold text-gray-500 dark:text-gray-400 mb-1 tracking-wider">Custo por aluno</p>
-                <p className="text-xl font-black text-gray-700 dark:text-gray-200">R$ 19,98</p>
+            {/* Destaque Plataforma */}
+            <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 mb-6 text-left">
+                <p className="text-[10px] uppercase font-bold text-gray-500 dark:text-gray-400 mb-1 tracking-wider">
+                  O que está na plataforma
+                </p>
+                <ul className="text-sm text-gray-700 dark:text-gray-200 space-y-1 mt-1">
+                  <li><Check size={12} className="inline text-green-600 mr-1" /> Painel para organizar até ~5 alunos ativos</li>
+                  <li><Check size={12} className="inline text-green-600 mr-1" /> Histórico de treinos e acompanhamento básico</li>
+                  <li><Check size={12} className="inline text-green-600 mr-1" /> Convites por link/QR Code enviados pelo WhatsApp</li>
+                </ul>
             </div>
 
             <Button variant="outline" fullWidth className="mb-8 dark:text-white dark:border-gray-600" onClick={() => handlePurchase('https://pay.cakto.com.br/3dgheuc_666289')}>
-              Contratar Team 5
+              Assinar Agora
             </Button>
 
             <ul className="space-y-4 text-sm text-gray-600 dark:text-gray-300">
-              <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> 5 Licenças Premium</li>
-              <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> Análise de Pratos + Treinos Ilimitada</li>
-              <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> Treinos Personalizados</li>
-              <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> Relatórios Básicos</li>
+              <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> Até ~5 alunos acompanhados na plataforma</li>
+              <li className="flex items-center gap-3"><div className="bg-green-100 dark:bg-green-900/30 p-1 rounded-full"><Check size={12} className="text-green-600" /></div> Relatórios básicos de engajamento</li>
             </ul>
           </div>
 
-          {/* CARD 2: TEAM 15 */}
+          {/* CARD 2: TEAM 15 – Plataforma para até ~15 alunos ativos */}
           <div className="bg-nutri-dark dark:bg-gray-900 p-8 rounded-[2.5rem] shadow-2xl border-2 border-orange-500 relative transform md:scale-105 reveal delay-400">
-             <div className="absolute top-0 right-0 bg-orange-500 text-white px-4 py-2 rounded-bl-2xl rounded-tr-2xl text-xs font-bold shadow-md">
-              🔥 MAIS VANTAJOSO
+             <div className="absolute top-0 right-0 bg-green-500 text-white px-4 py-2 rounded-bl-2xl rounded-tr-2xl text-xs font-bold shadow-md animate-pulse">
+              MAIS VANTAJOSO
             </div>
 
             <div className="text-sm font-bold text-orange-200 uppercase tracking-wider mb-2">Elite</div>
             <h3 className="font-serif text-3xl text-white font-bold mb-2">Team 15</h3>
-            <p className="text-xs text-orange-100/80 mb-6">Para Personais com agenda cheia.</p>
+            <p className="text-xs text-orange-100/80 mb-6">
+              Para personal trainers com carteira cheia que precisam organizar até ~15 alunos online.
+            </p>
             
             <div className="mb-6">
               <span className="text-5xl font-bold text-white">R$ 249,90</span>
@@ -149,22 +160,24 @@ export const PersonalTrainerPage: React.FC = () => {
               </p>
             </div>
 
-            {/* Destaque Custo por Aluno */}
-            <div className="bg-orange-500/10 p-3 rounded-xl border-2 border-dashed border-orange-500 mb-6 text-center">
-                <p className="text-[10px] uppercase font-bold text-orange-400 mb-1 tracking-wider">Custo por aluno</p>
-                <p className="text-2xl font-black text-white">R$ 16,66</p>
+            {/* Destaque Plataforma */}
+            <div className="bg-orange-500/10 p-3 rounded-xl border-2 border-dashed border-orange-500 mb-6 text-left">
+                <p className="text-[10px] uppercase font-bold text-orange-400 mb-1 tracking-wider">O que está na plataforma</p>
+                <ul className="text-sm text-white space-y-1 mt-1">
+                  <li><Check size={12} className="inline text-white mr-1" /> Organização de até ~15 alunos ativos na plataforma</li>
+                  <li><Check size={12} className="inline text-white mr-1" /> Visão clara de quem está em trial, ativo ou parado</li>
+                  <li><Check size={12} className="inline text-white mr-1" /> Ferramentas para renovar planos e aumentar retenção</li>
+                </ul>
             </div>
 
             <Button variant="secondary" fullWidth className="mb-8 font-bold bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-900/20 border-none" onClick={() => handlePurchase('https://pay.cakto.com.br/3etp85e_666303')}>
-              Contratar Team 15
+              Assinar Agora
             </Button>
 
             <ul className="space-y-4 text-sm text-white/90">
-              <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> 15 Licenças Premium</li>
-              <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> Análise de Pratos + Treinos Ilimitada</li>
-              <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> Treinos Personalizados</li>
-              <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> Suporte Prioritário</li>
-              <li className="flex items-center gap-3 font-bold text-orange-300"><div className="bg-orange-500 p-1 rounded-full"><Users size={12} className="text-white" /></div> Margem de Lucro Maior</li>
+              <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> Até ~15 alunos acompanhados na plataforma</li>
+              <li className="flex items-center gap-3"><div className="bg-orange-500 p-1 rounded-full"><Check size={12} className="text-white" /></div> Relatórios para mostrar resultados na renovação</li>
+              <li className="flex items-center gap-3 font-bold text-orange-300"><div className="bg-orange-500 p-1 rounded-full"><Users size={12} className="text-white" /></div> Foco em aumentar ticket e retenção</li>
             </ul>
           </div>
 

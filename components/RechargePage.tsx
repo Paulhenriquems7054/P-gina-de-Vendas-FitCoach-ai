@@ -30,11 +30,13 @@ export const RechargePage: React.FC = () => {
           
           {/* Opção 1: Ajuda Rápida */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 hover:border-orange-300 transition-all group reveal delay-100 relative">
+            <div className="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">
+              URGÊNCIA
+            </div>
             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-4 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
               <Zap size={24} />
             </div>
             <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Ajuda Rápida</h3>
-            <p className="text-xs text-orange-600 dark:text-orange-400 font-bold uppercase mb-4">Urgência</p>
             
             <div className="mb-4">
               <span className="text-3xl font-bold text-gray-800 dark:text-white">R$ 5,00</span>
@@ -54,7 +56,7 @@ export const RechargePage: React.FC = () => {
               className="bg-orange-500 hover:bg-orange-600 text-white shadow-orange-200" 
               onClick={() => handlePurchase('https://pay.cakto.com.br/ihfy8cz_668443')}
             >
-              Recarregar Agora
+              Comprar
             </Button>
           </div>
 
@@ -87,17 +89,19 @@ export const RechargePage: React.FC = () => {
               fullWidth 
               onClick={() => handlePurchase('https://pay.cakto.com.br/hhxugxb_668446')}
             >
-              Comprar Minutos de Reserva
+              Comprar
             </Button>
           </div>
 
           {/* Opção 3: Conversa Ilimitada */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 hover:border-purple-300 transition-all group reveal delay-500 relative">
+            <div className="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">
+              VIP
+            </div>
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
               <Infinity size={24} />
             </div>
             <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Conversa Ilimitada</h3>
-            <p className="text-xs text-purple-600 dark:text-purple-400 font-bold uppercase mb-4">VIP</p>
             
             <div className="mb-4">
               <span className="text-3xl font-bold text-gray-800 dark:text-white">R$ 19,90</span>
@@ -117,7 +121,7 @@ export const RechargePage: React.FC = () => {
               className="bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200" 
               onClick={() => handlePurchase('https://pay.cakto.com.br/trszqtv_668453')}
             >
-              Liberar Acesso Total
+              Comprar
             </Button>
           </div>
 

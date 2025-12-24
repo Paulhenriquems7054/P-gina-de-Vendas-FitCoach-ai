@@ -37,10 +37,13 @@ export const Pricing: React.FC = () => {
   return (
     <div id="pricing" className="py-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16 reveal">
-        <h2 className="font-serif text-4xl text-nutri-dark dark:text-white font-bold mb-4 transition-colors duration-300">Quanto custa ter Nutricionista + Personal Trainer disponível todo dia?</h2>
+        <h2 className="font-serif text-4xl text-nutri-dark dark:text-white font-bold mb-4 transition-colors duration-300">
+          Planos Individuais de IA para Alunos
+        </h2>
         <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg transition-colors duration-300">
-          Um Nutricionista cobra R$ 250,00 por consulta. Um Personal Trainer, R$ 150,00 por sessão. Outros apps cobram R$ 90,00 por mês e nem falam com você.
-          <br/><span className="font-semibold text-nutri-dark dark:text-white">No Fitcoach.ia, você tem Nutrição + Treinos personalizados com visão computacional e voz em tempo real por um preço ridículo.</span>
+          Estes planos são contratados diretamente pelo <strong>aluno</strong> dentro do app, depois que ele entra com o 
+          convite da academia. A academia paga apenas a plataforma. O uso da IA é cobrado individualmente, de forma 
+          transparente e independente.
         </p>
       </div>
 
@@ -54,23 +57,28 @@ export const Pricing: React.FC = () => {
         <PriceComparison />
       </div>
 
-      {/* Planos Premium */}
+      {/* Planos Individuais (Uso da IA) */}
       <div className="mb-16 text-center">
         <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg transition-colors duration-300">
-          Escolha o plano Premium que faz mais sentido para você:{" "}
+          O aluno começa com um <strong>teste grátis</strong> ao entrar pelo convite da academia e, se quiser continuar
+          usando a IA depois do período de trial, escolhe um destes planos individuais:
           <span className="font-semibold text-nutri-dark dark:text-white">
-            mensal para testar com calma ou anual para economizar forte.
+            {" "}mensal para testar com calma ou anual para economizar forte.
           </span>
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
         
-        {/* Monthly Plan */}
+        {/* Plano Mensal – Uso da IA pelo aluno */}
         <div className="order-2 md:order-1 bg-white dark:bg-gray-800 p-8 rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-700 relative z-10 hover:scale-[1.02] transition-all duration-300 reveal delay-100">
           <div className="mb-6">
-            <span className="text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold">Para quem quer testar</span>
-            <h3 className="font-serif text-3xl text-nutri-dark dark:text-white font-bold mt-2 transition-colors duration-300">Plano Mensal</h3>
+            <span className="text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold">
+              Para alunos que querem testar mês a mês
+            </span>
+            <h3 className="font-serif text-3xl text-nutri-dark dark:text-white font-bold mt-2 transition-colors duration-300">
+              Plano Mensal
+            </h3>
             <div className="mt-4 flex items-baseline">
               <span className="text-4xl font-bold text-gray-800 dark:text-white transition-colors duration-300">
                 R$ {monthlyPrice.toFixed(2).replace('.', ',')}
@@ -94,40 +102,39 @@ export const Pricing: React.FC = () => {
           <ul className="space-y-4 mb-8">
             <li className="flex items-center gap-3 text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 <div className="w-5 h-5 rounded-full bg-nutri-light dark:bg-gray-700 flex items-center justify-center text-nutri-dark dark:text-white shrink-0"><Check size={12} /></div>
-                Análise de Fotos Ilimitada (Comida + Treinos)
+                Análise fotos
             </li>
             <li className="flex items-center gap-3 text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 <div className="w-5 h-5 rounded-full bg-nutri-light dark:bg-gray-700 flex items-center justify-center text-nutri-dark dark:text-white shrink-0"><Check size={12} /></div>
-                Treinos Personalizados Ilimitados
+                Treinos personalizados
             </li>
             <li className="flex items-center gap-3 text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 <div className="w-5 h-5 rounded-full bg-nutri-light dark:bg-gray-700 flex items-center justify-center text-nutri-dark dark:text-white shrink-0"><Check size={12} /></div>
-                Chat de Texto Ilimitado
+                Chat ilimitado
             </li>
             <li className="flex items-center gap-3 text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 <div className="w-5 h-5 rounded-full bg-nutri-light dark:bg-gray-700 flex items-center justify-center text-nutri-dark dark:text-white shrink-0"><Check size={12} /></div>
-                15 min/dia de Consultoria de Voz (Live)
+                Voz 15min/dia
             </li>
              <li className="flex items-center gap-3 text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 <div className="w-5 h-5 rounded-full bg-nutri-light dark:bg-gray-700 flex items-center justify-center text-nutri-dark dark:text-white shrink-0"><Check size={12} /></div>
-                Cancele quando quiser
+                Cobrança individual, o aluno cancela quando quiser
             </li>
           </ul>
           
-          <Button variant="outline" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/zeygxve_668421')} className="dark:text-white dark:border-gray-500 dark:hover:bg-gray-700">QUERO O PLANO MENSAL</Button>
+          <Button variant="outline" fullWidth onClick={() => handlePurchase('https://pay.cakto.com.br/zeygxve_668421')} className="dark:text-white dark:border-gray-500 dark:hover:bg-gray-700">Assinar Agora</Button>
         </div>
 
-        {/* Annual Plan (Featured) */}
+        {/* Plano Anual – Uso da IA pelo aluno */}
         <div className="order-1 md:order-2 bg-nutri-dark dark:bg-gray-900 p-8 md:p-10 rounded-[2.5rem] shadow-2xl relative z-20 transform md:scale-105 ring-4 ring-nutri-accent/50 dark:ring-nutri-accent/30 reveal delay-200 border border-transparent dark:border-gray-700">
-          <div className="absolute top-0 right-0 bg-nutri-accent text-nutri-dark text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-[2rem] flex items-center gap-1">
-            <Star size={12} fill="currentColor" /> OFERTA VIP
+          <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-[2rem] flex items-center gap-1 animate-pulse">
+            MAIS VANTAJOSO
           </div>
           
           <div className="mb-6">
-            <span className="text-sm uppercase tracking-wider text-green-200 font-semibold flex items-center gap-2">
-               Recomendado
-            </span>
-            <h3 className="font-serif text-3xl text-white font-bold mt-2">Plano Anual (VIP)</h3>
+            <h3 className="font-serif text-3xl text-white font-bold mt-2">
+              Plano Anual VIP
+            </h3>
             
             {/* Bloco de Preço VIP */}
             <div className="mt-5 p-5 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
@@ -165,31 +172,23 @@ export const Pricing: React.FC = () => {
           <ul className="space-y-4 mb-8">
              <li className="flex items-center gap-3 text-white font-medium">
                 <div className="w-5 h-5 rounded-full bg-nutri-accent flex items-center justify-center text-nutri-dark shrink-0"><Check size={12} /></div>
-                Análise de Fotos Ilimitada (Comida + Treinos)
+                Tudo do mensal
             </li>
             <li className="flex items-center gap-3 text-white font-medium">
                 <div className="w-5 h-5 rounded-full bg-nutri-accent flex items-center justify-center text-nutri-dark shrink-0"><Check size={12} /></div>
-                Treinos Personalizados Ilimitados
+                Economia R$ 200
             </li>
             <li className="flex items-center gap-3 text-white font-medium">
                 <div className="w-5 h-5 rounded-full bg-nutri-accent flex items-center justify-center text-nutri-dark shrink-0"><Check size={12} /></div>
-                Chat de Texto Ilimitado
+                Garantia satisfação
             </li>
             <li className="flex items-center gap-3 text-white font-medium">
                 <div className="w-5 h-5 rounded-full bg-nutri-accent flex items-center justify-center text-nutri-dark shrink-0"><Check size={12} /></div>
-                15 min/dia de Consultoria de Voz (Live)
-            </li>
-            <li className="flex items-center gap-3 text-white font-medium">
-                <div className="w-5 h-5 rounded-full bg-nutri-accent flex items-center justify-center text-nutri-dark shrink-0"><Check size={12} /></div>
-                Acesso Imediato
-            </li>
-             <li className="flex items-center gap-3 text-green-200 text-sm italic">
-                <ShieldCheck size={16} />
-                Garantia de Satisfação
+                Acesso imediato
             </li>
           </ul>
           
-          <Button variant="secondary" fullWidth className="font-bold text-lg h-14" onClick={() => handlePurchase('https://pay.cakto.com.br/wvbkepi_668441')}>QUERO O PLANO ANUAL</Button>
+          <Button variant="secondary" fullWidth className="font-bold text-lg h-14" onClick={() => handlePurchase('https://pay.cakto.com.br/wvbkepi_668441')}>Assinar Agora</Button>
         </div>
 
       </div>
