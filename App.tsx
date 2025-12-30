@@ -29,7 +29,7 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
           <div className="animate-fade-in-up">
             {/* Headline forte */}
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-nutri-dark dark:text-white leading-tight mb-6 transition-colors duration-300">
-              Teste o <span className="text-nutri-accent">FitCoach.ai</span> por <span className="text-nutri-accent">7 dias grátis</span>
+              Teste o <span className="text-nutri-accent">FitCoach.ai</span> por <span className="text-nutri-accent">3 dias grátis</span>
             </h1>
             
             {/* Subheadline */}
@@ -123,7 +123,7 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
               },
               { 
                 step: "2", 
-                title: "Use tudo por 7 dias", 
+                title: "Use tudo por 3 dias", 
                 text: "Acesso Premium completo durante o período de teste.",
                 icon: <ShieldCheck size={24} />
               },
@@ -179,7 +179,7 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
                   <span className="text-green-500">✓</span>
-                  <span>Trial: <strong>7 dias</strong> de acesso Premium completo</span>
+                  <span>Trial: <strong>3 dias</strong> de acesso Premium completo</span>
                 </li>
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
                   <span className="text-green-500">✓</span>
@@ -211,15 +211,15 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
                   <span className="text-blue-500">✓</span>
-                  <span>Trial: <strong>14 dias</strong> de acesso Premium completo</span>
+                  <span>Plataforma de gestão completa</span>
                 </li>
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
                   <span className="text-blue-500">✓</span>
-                  <span>Limite de alunos durante o trial</span>
+                  <span>Alunos recebem 3 dias de trial gratuito da IA</span>
                 </li>
-                <li className="flex items-center gap-2 text-red-600 dark:text-red-400">
-                  <span>⚠️</span>
-                  <span><strong>Após o trial:</strong> Alunos perdem acesso. Gestor só acessa painel e pagamento</span>
+                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
+                  <span className="text-blue-500">✓</span>
+                  <span>Valor fixo mensal, sem surpresas</span>
                 </li>
               </ul>
               <Button 
@@ -455,7 +455,7 @@ const App: React.FC = () => {
   const faqs = [
     {
       question: "Preciso cadastrar cartão no teste?",
-      answer: "Não. O teste de 7 dias é totalmente gratuito e não pedimos cartão de crédito. Você só precisa assinar um plano se quiser continuar usando após o período de teste."
+      answer: "Não. O teste de 3 dias é totalmente gratuito e não pedimos cartão de crédito. Você só precisa assinar um plano se quiser continuar usando após o período de teste."
     },
     {
       question: "Posso cancelar?",
@@ -463,7 +463,7 @@ const App: React.FC = () => {
     },
     {
       question: "O que acontece após o trial?",
-      answer: "Após os 7 dias de teste, o acesso ao app é bloqueado até você contratar um plano. Apenas a tela de pagamento permanece acessível. Nenhuma funcionalidade principal pode ser usada sem plano ativo."
+      answer: "Após os 3 dias de teste, o acesso ao app é bloqueado até você contratar um plano. Apenas a tela de pagamento permanece acessível. Nenhuma funcionalidade principal pode ser usada sem plano ativo."
     }
   ];
 
@@ -517,7 +517,17 @@ const App: React.FC = () => {
                   Para Academias
                 </button>
                 <button 
-                  onClick={() => navigateTo('home')} 
+                  onClick={() => {
+                    if (activePage !== 'home') {
+                      setActivePage('home');
+                      setTimeout(() => {
+                        document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }, 200);
+                    } else {
+                      document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                    setIsMenuOpen(false);
+                  }} 
                   className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
                     activePage === 'home' 
                       ? 'text-nutri-dark dark:text-white bg-gray-100 dark:bg-gray-800 font-semibold' 
@@ -628,7 +638,17 @@ const App: React.FC = () => {
             {/* Navegação Principal */}
             <div className="border-b border-gray-200 dark:border-gray-700 pb-4 mb-4">
               <button className="w-full text-left py-2 font-bold text-lg" onClick={() => { navigateTo('b2b'); }}>Início</button>
-              <button className="w-full text-left py-2" onClick={() => { navigateTo('home'); }}>Planos Individuais</button>
+              <button className="w-full text-left py-2" onClick={() => {
+                if (activePage !== 'home') {
+                  setActivePage('home');
+                  setTimeout(() => {
+                    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 200);
+                } else {
+                  document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                setIsMenuOpen(false);
+              }}>Planos Individuais</button>
               <button className="w-full text-left py-2" onClick={() => { navigateTo('recharge'); }}>Recarga</button>
             </div>
 
