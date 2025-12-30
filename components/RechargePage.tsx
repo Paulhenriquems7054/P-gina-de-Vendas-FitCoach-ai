@@ -15,10 +15,10 @@ export const RechargePage: React.FC = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-xs font-bold uppercase tracking-wide mb-6">
             <BatteryCharging size={14} /> Recarga de Voz (Opcional)
           </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-nutri-dark dark:text-white mb-4">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-nutri-dark dark:text-white mb-4 px-2">
             Precisa de mais tempo de conversa?
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-2">
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-2 px-2">
             Seu limite diário de voz acabou, mas você pode continuar com nossos pacotes de recarga instantânea.
           </p>
           <p className="text-sm text-green-600 dark:text-green-400 font-medium">
@@ -32,17 +32,17 @@ export const RechargePage: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-6">
           
           {/* Opção 1: Ajuda Rápida */}
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 hover:border-orange-300 transition-all group reveal delay-100 relative">
+          <div className="bg-white dark:bg-gray-800 p-5 md:p-6 rounded-2xl md:rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 hover:border-orange-300 transition-all group reveal delay-100 relative">
             <div className="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">
               URGÊNCIA
             </div>
             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-4 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
               <Zap size={24} />
             </div>
-            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Sessão Turbo</h3>
+            <h3 className="text-lg md:text-xl font-bold text-nutri-dark dark:text-white mb-1">Sessão Turbo</h3>
             
             <div className="mb-4">
-              <span className="text-3xl font-bold text-gray-800 dark:text-white">R$ 5,00</span>
+              <span className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">R$ 5,00</span>
               <div className="text-xs text-gray-400">Pagamento Único</div>
               <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
                 Valor total no checkout: <span className="font-semibold">R$ 5,99</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
@@ -64,14 +64,14 @@ export const RechargePage: React.FC = () => {
           </div>
 
           {/* Opção 2: Minutos de Reserva */}
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-xl border-2 border-nutri-dark dark:border-green-500 relative transform md:-translate-y-2 reveal delay-300">
+          <div className="bg-white dark:bg-gray-800 p-5 md:p-6 rounded-2xl md:rounded-3xl shadow-xl border-2 border-nutri-dark dark:border-green-500 relative transform lg:-translate-y-2 reveal delay-300">
             <div className="absolute top-0 right-0 bg-nutri-dark dark:bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl flex items-center gap-1">
               MELHOR ESCOLHA
             </div>
             <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4 text-green-600 dark:text-green-400">
               <Clock size={24} />
             </div>
-            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Banco de Voz 100</h3>
+            <h3 className="text-lg md:text-xl font-bold text-nutri-dark dark:text-white mb-1">Banco de Voz 100</h3>
             <p className="text-xs text-green-600 dark:text-green-400 font-bold uppercase mb-4">Custo-Benefício</p>
             
             <div className="mb-4">
@@ -97,14 +97,14 @@ export const RechargePage: React.FC = () => {
           </div>
 
           {/* Opção 3: Conversa Ilimitada */}
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 hover:border-purple-300 transition-all group reveal delay-500 relative">
+          <div className="bg-white dark:bg-gray-800 p-5 md:p-6 rounded-2xl md:rounded-3xl shadow-md border border-gray-100 dark:border-gray-700 hover:border-purple-300 transition-all group reveal delay-500 relative">
             <div className="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">
               VIP
             </div>
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
               <Infinity size={24} />
             </div>
-            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Passe Livre 30 Dias</h3>
+            <h3 className="text-lg md:text-xl font-bold text-nutri-dark dark:text-white mb-1">Passe Livre 30 Dias</h3>
             
             <div className="mb-4">
               <span className="text-3xl font-bold text-gray-800 dark:text-white">R$ 19,90</span>
@@ -122,7 +122,7 @@ export const RechargePage: React.FC = () => {
             <Button 
               fullWidth 
               className="bg-purple-600 hover:bg-purple-700 text-white shadow-purple-200" 
-              onClick={() => handlePurchase('https://pay.cakto.com.br/trszqtv_668453')}
+              onClick={() => handlePurchase('https://pay.cakto.com.br/3smg99n_693764')}
             >
               Comprar
             </Button>

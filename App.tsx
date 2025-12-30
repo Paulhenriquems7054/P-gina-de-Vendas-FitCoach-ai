@@ -20,7 +20,7 @@ interface HomeContentProps {
 const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFaqIndex, toggleFaq, navigateTo }) => (
   <div className="animate-fade-in">
     {/* A) HERO SECTION - Acima da dobra */}
-      <section id="top" className="pt-32 pb-20 px-6 relative overflow-hidden bg-nutri-bg dark:bg-gray-900 transition-colors duration-300">
+      <section id="top" className="pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-6 relative overflow-hidden bg-nutri-bg dark:bg-gray-900 transition-colors duration-300">
         {/* Background Blobs */}
         <div className="absolute top-20 -left-40 w-96 h-96 bg-green-200/30 dark:bg-green-500/10 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-pulse transition-colors duration-500"></div>
         <div className="absolute top-40 -right-40 w-96 h-96 bg-blue-200/30 dark:bg-blue-500/10 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-pulse delay-1000 transition-colors duration-500"></div>
@@ -28,12 +28,12 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="animate-fade-in-up">
             {/* Headline forte */}
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-nutri-dark dark:text-white leading-tight mb-6 transition-colors duration-300">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-nutri-dark dark:text-white leading-tight mb-4 md:mb-6 transition-colors duration-300">
               Teste o <span className="text-nutri-accent">FitCoach.ai</span> por <span className="text-nutri-accent">3 dias grátis</span>
             </h1>
             
             {/* Subheadline */}
-            <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 leading-relaxed font-medium transition-colors duration-300">
+            <h2 className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 md:mb-6 leading-relaxed font-medium transition-colors duration-300 px-2">
               Acesso Premium completo. Sem cartão de crédito.
             </h2>
 
@@ -162,9 +162,9 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Usuários Individuais */}
-            <div className="bg-nutri-bg dark:bg-gray-700 p-8 rounded-2xl border-2 border-green-200 dark:border-green-600 reveal delay-100">
+            <div className="bg-nutri-bg dark:bg-gray-700 p-6 md:p-8 rounded-2xl border-2 border-green-200 dark:border-green-600 reveal delay-100">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl">
                   👤
@@ -196,7 +196,7 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
             </div>
 
             {/* Academias */}
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-8 rounded-2xl border-2 border-blue-300 dark:border-blue-600 reveal delay-200">
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 md:p-8 rounded-2xl border-2 border-blue-300 dark:border-blue-600 reveal delay-200">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
                   🏋️

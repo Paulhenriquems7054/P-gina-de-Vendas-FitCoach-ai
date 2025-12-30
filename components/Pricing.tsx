@@ -38,16 +38,16 @@ export const Pricing: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
         
         {/* Plano Mensal */}
-        <div className="order-2 md:order-1 bg-white dark:bg-gray-800 p-8 rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-700 relative z-10 hover:scale-[1.02] transition-all duration-300 reveal delay-100">
+        <div className="order-2 md:order-1 bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-700 relative z-10 hover:scale-[1.02] transition-all duration-300 reveal delay-100">
           <div className="mb-6">
-            <h3 className="font-serif text-3xl text-nutri-dark dark:text-white font-bold transition-colors duration-300">
+            <h3 className="font-serif text-2xl md:text-3xl text-nutri-dark dark:text-white font-bold transition-colors duration-300">
               Plano Mensal
             </h3>
             <div className="mt-4 flex items-baseline">
-              <span className="text-4xl font-bold text-gray-800 dark:text-white transition-colors duration-300">
+              <span className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white transition-colors duration-300">
                 R$ {monthlyPrice.toFixed(2).replace('.', ',')}
               </span>
-              <span className="text-gray-500 dark:text-gray-400 ml-2">/mês</span>
+              <span className="text-gray-500 dark:text-gray-400 ml-2 text-sm md:text-base">/mês</span>
             </div>
           </div>
           
@@ -74,28 +74,28 @@ export const Pricing: React.FC = () => {
         </div>
 
         {/* Plano Anual (VIP) */}
-        <div className="order-1 md:order-2 bg-nutri-dark dark:bg-gray-900 p-8 md:p-10 rounded-[2.5rem] shadow-2xl relative z-20 transform md:scale-105 ring-4 ring-nutri-accent/50 dark:ring-nutri-accent/30 reveal delay-200 border border-transparent dark:border-gray-700">
-          <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-[2rem] flex items-center gap-1 animate-pulse">
+        <div className="order-1 md:order-2 bg-nutri-dark dark:bg-gray-900 p-6 md:p-8 lg:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl relative z-20 transform lg:scale-105 ring-2 md:ring-4 ring-nutri-accent/50 dark:ring-nutri-accent/30 reveal delay-200 border border-transparent dark:border-gray-700">
+          <div className="absolute top-0 right-0 bg-green-500 text-white text-[10px] md:text-xs font-bold px-2 md:px-4 py-1 md:py-2 rounded-bl-xl md:rounded-bl-2xl rounded-tr-xl md:rounded-tr-[2rem] flex items-center gap-1 animate-pulse">
             OFERTA VIP
           </div>
-          <div className="absolute top-0 left-0 bg-blue-500 text-white text-xs font-bold px-4 py-2 rounded-br-2xl rounded-tl-[2rem] flex items-center gap-1">
+          <div className="absolute top-0 left-0 bg-blue-500 text-white text-[10px] md:text-xs font-bold px-2 md:px-4 py-1 md:py-2 rounded-br-xl md:rounded-br-2xl rounded-tl-xl md:rounded-tl-[2rem] flex items-center gap-1">
             Recomendado
           </div>
           
           <div className="mb-6">
-            <h3 className="font-serif text-3xl text-white font-bold mt-2">
+            <h3 className="font-serif text-2xl md:text-3xl text-white font-bold mt-2">
               Plano Anual (VIP)
             </h3>
             
             {/* Bloco de Preço VIP */}
-            <div className="mt-5 p-5 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <div className="text-green-200/60 text-sm decoration-slice line-through mb-1">
+            <div className="mt-4 md:mt-5 p-4 md:p-5 bg-white/5 rounded-xl md:rounded-2xl border border-white/10 backdrop-blur-sm">
+                <div className="text-green-200/60 text-xs md:text-sm decoration-slice line-through mb-1">
                     De R$ 497,00 por:
                 </div>
                 
                 <div className="flex flex-col mb-3">
-                  <div className="text-5xl font-bold text-nutri-accent tracking-tight">R$ 297,00</div>
-                  <div className="text-white font-medium text-lg -mt-1">à vista</div>
+                  <div className="text-4xl md:text-5xl font-bold text-nutri-accent tracking-tight">R$ 297,00</div>
+                  <div className="text-white font-medium text-base md:text-lg -mt-1">à vista</div>
                 </div>
                 
                 <div className="w-full h-px bg-white/10 my-3"></div>
@@ -137,7 +137,7 @@ export const Pricing: React.FC = () => {
             </li>
           </ul>
           
-          <Button variant="secondary" fullWidth className="font-bold text-lg h-14" onClick={() => handlePurchase('https://pay.cakto.com.br/xphpm5f_703310')}>QUERO O PLANO ANUAL</Button>
+          <Button variant="secondary" fullWidth className="font-bold text-base md:text-lg h-12 md:h-14" onClick={() => handlePurchase('https://pay.cakto.com.br/xphpm5f_703310')}>QUERO O PLANO ANUAL</Button>
         </div>
 
       </div>

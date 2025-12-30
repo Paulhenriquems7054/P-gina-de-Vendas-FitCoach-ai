@@ -52,15 +52,15 @@ export const B2BPage: React.FC = () => {
   return (
     <div className="animate-fade-in-up">
       {/* 1. Hero Section – Problema do Gestor + Solução da Plataforma */}
-      <section className="pt-32 pb-16 px-6 bg-blue-50 dark:bg-gray-800/50 transition-colors duration-300">
+      <section className="pt-24 md:pt-32 pb-12 md:pb-16 px-4 md:px-6 bg-blue-50 dark:bg-gray-800/50 transition-colors duration-300">
         <div className="max-w-5xl mx-auto text-center reveal">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs font-bold uppercase tracking-wide mb-6">
             <Building2 size={14} /> Plataforma de Gestão Digital para Academias
           </div>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-nutri-dark dark:text-white leading-tight mb-6">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-nutri-dark dark:text-white leading-tight mb-4 md:mb-6 px-2">
             Transforme sua academia em uma <span className="text-blue-600 dark:text-blue-400">plataforma inteligente</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed font-medium">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed font-medium px-2">
             Plataforma de gestão digital para academias. Seus alunos testam a IA. <strong>Só paga quem decide usar.</strong>
           </p>
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-2xl p-4 mb-8 max-w-2xl mx-auto">
@@ -142,18 +142,18 @@ export const B2BPage: React.FC = () => {
             Escolha o plano ideal para o porte da sua academia. Valor fixo mensal, sem surpresas.
           </p>
         </div>
-        <div className="grid md:grid-cols-4 gap-6 items-start">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-start">
           
           {/* STARTER MINI */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-lg border-2 border-green-500 dark:border-green-500 relative flex flex-col reveal delay-50">
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border-2 border-green-500 dark:border-green-500 relative flex flex-col reveal delay-50">
             <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Starter Mini</div>
-            <h3 className="font-serif text-2xl text-nutri-dark dark:text-white font-bold mb-1">Plataforma para pequenas academias</h3>
+            <h3 className="font-serif text-xl md:text-2xl text-nutri-dark dark:text-white font-bold mb-1">Plataforma para pequenas academias</h3>
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
               Ideal para academias iniciando com acompanhamento digital de alunos.
             </p>
             
             <div className="mb-6">
-              <span className="text-3xl font-bold text-nutri-dark dark:text-white">R$ 149,90</span>
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 149,90</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
                 Valor total por cobrança no checkout: <span className="font-semibold">R$ 150,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
@@ -188,7 +188,7 @@ export const B2BPage: React.FC = () => {
           </div>
 
           {/* STARTER */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col reveal delay-100">
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col reveal delay-100">
             <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Starter</div>
             <h3 className="font-serif text-2xl text-nutri-dark dark:text-white font-bold mb-1">Plataforma Starter</h3>
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Para academias com base moderada de alunos ativos.</p>
@@ -228,16 +228,16 @@ export const B2BPage: React.FC = () => {
           </div>
 
           {/* GROWTH */}
-          <div className="bg-nutri-dark dark:bg-gray-900 p-8 rounded-[2rem] shadow-2xl border-2 border-nutri-accent relative transform md:-translate-y-6 flex flex-col reveal delay-300">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-nutri-accent text-nutri-dark px-4 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-md whitespace-nowrap animate-pulse">
+          <div className="bg-nutri-dark dark:bg-gray-900 p-6 md:p-8 rounded-[2rem] shadow-2xl border-2 border-nutri-accent relative transform lg:-translate-y-6 flex flex-col reveal delay-300">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-nutri-accent text-nutri-dark px-3 md:px-4 py-1 rounded-full text-[10px] md:text-xs font-bold flex items-center gap-1 shadow-md whitespace-nowrap animate-pulse">
               MAIS VENDIDO
             </div>
             <div className="text-sm font-bold text-green-200 uppercase tracking-wider mb-2">Growth</div>
-            <h3 className="font-serif text-2xl text-white font-bold mb-1">Plataforma Growth</h3>
+            <h3 className="font-serif text-xl md:text-2xl text-white font-bold mb-1">Plataforma Growth</h3>
             <p className="text-xs text-green-100/80 mb-4">Para academias com grande base de alunos e múltiplos personais.</p>
             
             <div className="mb-6">
-              <span className="text-4xl font-bold text-white">R$ 649,90</span>
+              <span className="text-3xl md:text-4xl font-bold text-white">R$ 649,90</span>
               <span className="text-green-200/60 text-sm">/mês</span>
               <p className="mt-1 text-[11px] text-green-200/80">
                 Valor total por cobrança no checkout: <span className="font-semibold">R$ 650,89</span> (inclui taxa fixa de R$ 0,99 da Cakto para Pix e cartão).
@@ -269,7 +269,7 @@ export const B2BPage: React.FC = () => {
           </div>
 
           {/* PRO */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col reveal delay-500">
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col reveal delay-500">
             <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Pro</div>
             <h3 className="font-serif text-2xl text-nutri-dark dark:text-white font-bold mb-1">Plataforma Pro</h3>
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Para grandes academias e redes com alto volume de alunos.</p>
@@ -560,7 +560,7 @@ export const B2BPage: React.FC = () => {
             <Button 
               fullWidth 
               className="bg-purple-500 hover:bg-purple-600 text-white shadow-purple-200" 
-              onClick={() => handlePurchase('https://pay.cakto.com.br/7days_668449')}
+              onClick={() => handlePurchase('https://pay.cakto.com.br/3smg99n_693764')}
             >
               Comprar
             </Button>
