@@ -486,7 +486,7 @@ export const B2BPage: React.FC = () => {
             <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-4 text-orange-600 dark:text-orange-400 group-hover:scale-110 transition-transform">
               <Zap size={24} />
             </div>
-            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Ajuda Rápida</h3>
+            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Sessão Turbo</h3>
             <div className="mb-4">
               <span className="text-3xl font-bold text-gray-800 dark:text-white">R$ 5,00</span>
               <div className="text-xs text-gray-400">Pagamento Único</div>
@@ -515,7 +515,7 @@ export const B2BPage: React.FC = () => {
             <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4 text-green-600 dark:text-green-400">
               <Clock size={24} />
             </div>
-            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Minutos de Reserva</h3>
+            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Banco de Voz 100</h3>
             <p className="text-xs text-green-600 dark:text-green-400 font-bold uppercase mb-4">Custo-Benefício</p>
             <div className="mb-4">
               <span className="text-3xl font-bold text-gray-800 dark:text-white">R$ 12,90</span>
@@ -545,7 +545,7 @@ export const B2BPage: React.FC = () => {
             <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform">
               <Infinity size={24} />
             </div>
-            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Conversa Ilimitada</h3>
+            <h3 className="text-xl font-bold text-nutri-dark dark:text-white mb-1">Passe Livre 30 Dias</h3>
             <div className="mb-4">
               <span className="text-3xl font-bold text-gray-800 dark:text-white">R$ 19,90</span>
               <div className="text-xs text-gray-400">Pagamento Único</div>
@@ -554,8 +554,8 @@ export const B2BPage: React.FC = () => {
               </p>
             </div>
             <div className="bg-gray-50 dark:bg-gray-700/50 p-3 rounded-xl mb-6 text-sm">
-              <p className="font-bold text-nutri-dark dark:text-white mb-1">Voz Ilimitada por 7 dias</p>
-              <p className="text-gray-500 dark:text-gray-400 text-xs">Use à vontade durante uma semana completa.</p>
+              <p className="font-bold text-nutri-dark dark:text-white mb-1">Voz Ilimitada por 30 dias</p>
+              <p className="text-gray-500 dark:text-gray-400 text-xs">Remova o limite de 15 minutos diários pelo próximo mês.</p>
             </div>
             <Button 
               fullWidth 

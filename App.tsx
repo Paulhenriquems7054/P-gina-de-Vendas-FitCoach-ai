@@ -4,7 +4,6 @@ import { LiveDemo } from './components/LiveDemo';
 import { Button } from './components/Button';
 import { B2BPage } from './components/B2BPage';
 import { RechargePage } from './components/RechargePage';
-import { PersonalTrainerPage } from './components/PersonalTrainerPage';
 import { Logo } from './components/Logo';
 import { Pricing } from './components/Pricing';
 
@@ -14,7 +13,7 @@ interface HomeContentProps {
   faqs: any[];
   openFaqIndex: number | null;
   toggleFaq: (i: number) => void;
-  navigateTo: (page: 'home' | 'b2b' | 'recharge' | 'personal') => void;
+  navigateTo: (page: 'home' | 'b2b' | 'recharge') => void;
 }
 
 // Componente Interno com o conteúdo da Landing Page Original
@@ -207,7 +206,7 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
                 </h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Ideal para gestores e personal trainers que querem aumentar retenção.
+                Ideal para gestores de academias que querem aumentar retenção de alunos.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
@@ -288,9 +287,9 @@ const App: React.FC = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
   const hasAnimatedOnLoad = useRef(false);
 
-  // Simple State-based Router: 'home' | 'b2b' | 'recharge' | 'personal'
+  // Simple State-based Router: 'home' | 'b2b' | 'recharge'
   // Foco de vendas principal: Academias (B2B) como página inicial
-  const [activePage, setActivePage] = useState<'home' | 'b2b' | 'recharge' | 'personal'>('b2b');
+  const [activePage, setActivePage] = useState<'home' | 'b2b' | 'recharge'>('b2b');
 
   // Function to trigger the magic logo reveal
   const triggerLogoAnimation = () => {
@@ -321,7 +320,6 @@ const App: React.FC = () => {
     const path = window.location.pathname;
     if (path === '/empresas') setActivePage('b2b');
     else if (path === '/recarga') setActivePage('recharge');
-    else if (path === '/personal') setActivePage('personal');
 
     // Trigger Animation ONLY ONCE on mount
     if (!hasAnimatedOnLoad.current) {
@@ -414,7 +412,7 @@ const App: React.FC = () => {
     }
   };
 
-  const navigateTo = (page: 'home' | 'b2b' | 'recharge' | 'personal') => {
+  const navigateTo = (page: 'home' | 'b2b' | 'recharge') => {
     setActivePage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setIsMenuOpen(false);
@@ -447,16 +445,6 @@ const App: React.FC = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
-  };
-
-  const navigateToPersonalPlans = () => {
-    setIsMenuOpen(false);
-    setActivePage('personal');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setTimeout(() => {
-      const element = document.getElementById('plans-personal');
-      if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 200);
   };
 
   const handleDirectPurchase = (url: string) => {
@@ -657,7 +645,6 @@ const App: React.FC = () => {
             <div className="border-b border-gray-200 dark:border-gray-700 pb-4 mb-4">
               <button className="w-full text-left py-2 font-bold text-lg" onClick={() => { navigateTo('b2b'); }}>Início</button>
               <button className="w-full text-left py-2" onClick={() => { navigateTo('home'); }}>Planos Individuais</button>
-              <button className="w-full text-left py-2" onClick={() => { navigateTo('personal'); }}>Para Personais</button>
               <button className="w-full text-left py-2" onClick={() => { navigateTo('recharge'); }}>Recarga</button>
             </div>
 
@@ -717,27 +704,6 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            {/* Planos para Personal Trainers */}
-            <div className="mb-4">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Planos para Personais</h3>
-              <div className="flex flex-col gap-2 text-sm">
-                <button 
-                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
-                  onClick={navigateToPersonalPlans}
-                >
-                  <span>Team 5 - R$ 99,90/mês</span>
-                  <ArrowRight size={16} className="text-gray-400" />
-                </button>
-                <button 
-                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
-                  onClick={navigateToPersonalPlans}
-                >
-                  <span>Team 15 - R$ 249,90/mês</span>
-                  <span className="text-xs bg-orange-500 text-white px-2 py-0.5 rounded-full font-bold">MAIS VANTAJOSO</span>
-                </button>
-              </div>
-            </div>
-
             {/* Recargas */}
             <div className="mb-4">
               <h3 className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Recargas de IA</h3>
@@ -746,19 +712,19 @@ const App: React.FC = () => {
                   className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   onClick={() => { navigateTo('recharge'); }}
                 >
-                  Ajuda Rápida - R$ 5,00
+                  Sessão Turbo - R$ 5,00
                 </button>
                 <button 
                   className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   onClick={() => { navigateTo('recharge'); }}
                 >
-                  Minutos de Reserva - R$ 12,90
+                  Banco de Voz 100 - R$ 12,90
                 </button>
                 <button 
                   className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   onClick={() => { navigateTo('recharge'); }}
                 >
-                  Conversa Ilimitada - R$ 19,90
+                  Passe Livre 30 Dias - R$ 19,90
                 </button>
               </div>
             </div>
@@ -772,7 +738,6 @@ const App: React.FC = () => {
           {activePage === 'home' && <HomeContent scrollToSection={scrollToSection} faqs={faqs} openFaqIndex={openFaqIndex} toggleFaq={toggleFaq} navigateTo={navigateTo} />}
           {activePage === 'b2b' && <B2BPage />}
           {activePage === 'recharge' && <RechargePage />}
-          {activePage === 'personal' && <PersonalTrainerPage />}
       </main>
 
       {/* Footer */}
