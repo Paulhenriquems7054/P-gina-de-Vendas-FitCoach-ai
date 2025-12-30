@@ -550,22 +550,6 @@ const App: React.FC = () => {
                 >
                   {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
                 </button>
-
-                <Button 
-                  variant="outline" 
-                  className="py-2 px-4 text-sm font-semibold hidden md:block" 
-                  onClick={() => navigateTo('home')}
-                >
-                  Planos Individuais
-                </Button>
-
-                <Button 
-                  variant="primary" 
-                  className="py-2 px-4 text-sm font-semibold" 
-                  onClick={() => navigateTo('b2b')}
-                >
-                  Planos para Academias
-                </Button>
               </div>
             </div>
 
