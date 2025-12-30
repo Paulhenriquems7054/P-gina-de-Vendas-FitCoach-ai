@@ -422,7 +422,13 @@ const App: React.FC = () => {
 
   const scrollToPlan = (planId: string) => {
     setIsMenuOpen(false);
-    if (activePage !== 'b2b') {
+    if (planId === 'student-plans') {
+      // Navega para a página home onde estão os planos individuais
+      setActivePage('home');
+      setTimeout(() => {
+        document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    } else if (activePage !== 'b2b') {
       setActivePage('b2b');
       setTimeout(() => {
         const element = document.getElementById(planId);
@@ -523,6 +529,16 @@ const App: React.FC = () => {
                   Para Academias
                 </button>
                 <button 
+                  onClick={() => navigateTo('home')} 
+                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
+                    activePage === 'home' 
+                      ? 'text-nutri-dark dark:text-white bg-gray-100 dark:bg-gray-800 font-semibold' 
+                      : 'text-gray-600 dark:text-gray-300 hover:text-nutri-dark dark:hover:text-white'
+                  }`}
+                >
+                  Planos Individuais
+                </button>
+                <button 
                   onClick={() => navigateTo('recharge')} 
                   className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
                     activePage === 'recharge' 
@@ -548,6 +564,14 @@ const App: React.FC = () => {
                 </button>
 
                 <Button 
+                  variant="outline" 
+                  className="py-2 px-4 text-sm font-semibold hidden md:block" 
+                  onClick={() => navigateTo('home')}
+                >
+                  Planos Individuais
+                </Button>
+
+                <Button 
                   variant="primary" 
                   className="py-2 px-4 text-sm font-semibold" 
                   onClick={() => navigateTo('b2b')}
@@ -557,20 +581,13 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Theme Toggle */}
             <div className="flex items-center gap-3 lg:hidden">
               <button 
                 onClick={toggleTheme} 
                 className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-nutri-dark dark:text-yellow-300"
               >
                 {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-              <button 
-                className="text-nutri-dark dark:text-white p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label="Menu"
-              >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
@@ -639,6 +656,7 @@ const App: React.FC = () => {
             {/* Navegação Principal */}
             <div className="border-b border-gray-200 dark:border-gray-700 pb-4 mb-4">
               <button className="w-full text-left py-2 font-bold text-lg" onClick={() => { navigateTo('b2b'); }}>Início</button>
+              <button className="w-full text-left py-2" onClick={() => { navigateTo('home'); }}>Planos Individuais</button>
               <button className="w-full text-left py-2" onClick={() => { navigateTo('personal'); }}>Para Personais</button>
               <button className="w-full text-left py-2" onClick={() => { navigateTo('recharge'); }}>Recarga</button>
             </div>
