@@ -5,7 +5,6 @@ import { Button } from './components/Button';
 import { B2BPage } from './components/B2BPage';
 import { RechargePage } from './components/RechargePage';
 import { Logo } from './components/Logo';
-import { Pricing } from './components/Pricing';
 
 // Interface atualizada para receber navigateTo
 interface HomeContentProps {
@@ -29,26 +28,29 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
           <div className="animate-fade-in-up">
             {/* Headline forte */}
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-nutri-dark dark:text-white leading-tight mb-4 md:mb-6 transition-colors duration-300">
-              Teste o <span className="text-nutri-accent">FitCoach.ai</span> por <span className="text-nutri-accent">3 dias grátis</span>
+              <span className="text-nutri-accent">FitCoach.ai</span> — A inteligência artificial da sua academia
             </h1>
             
             {/* Subheadline */}
             <h2 className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 md:mb-6 leading-relaxed font-medium transition-colors duration-300 px-2">
-              Acesso Premium completo. Sem cartão de crédito.
+              Automatize treinos, acompanhamento e motivação com IA multimodal. Texto, imagem e voz integrados para alunos e professores.
             </h2>
 
-            {/* Aviso visível sobre bloqueio */}
-            <div className="bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-400 dark:border-yellow-600 rounded-2xl p-4 mb-8 max-w-2xl mx-auto">
-              <p className="text-sm md:text-base text-yellow-800 dark:text-yellow-200 font-medium">
-                ⚠️ <strong>Importante:</strong> Após o período de teste, é necessário assinar um plano para continuar usando. Sem assinatura ativa, o acesso é bloqueado.
+            {/* Chamada de experimentação */}
+            <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-400 dark:border-blue-600 rounded-2xl p-4 mb-8 max-w-2xl mx-auto">
+              <p className="text-sm md:text-base text-blue-800 dark:text-blue-200 font-medium">
+                ✨ Experimente a IA FitCoach na sua academia com <strong>3 interações gratuitas</strong> para alunos novos.
               </p>
             </div>
 
             {/* CTA primário */}
             <div className="mb-8">
-              <Button className="shadow-green-900/20 py-5 px-8 text-lg font-bold" onClick={() => window.location.href = 'https://fit-coach-ia.vercel.app/'}>
-                Começar teste grátis agora
+              <Button className="shadow-green-900/20 py-5 px-8 text-lg font-bold" onClick={() => navigateTo('b2b')}>
+                Quero ativar FitCoach.AI na minha academia
               </Button>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-3">
+                Planos mensais e anuais com IA completa inclusa
+              </p>
             </div>
 
             {/* Vídeo/Demo */}
@@ -71,21 +73,21 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
         </div>
       </section>
 
-      {/* B) PROVA DE VALOR - Curta e direta */}
+      {/* B) DIFERENCIAIS - IA Multimodal */}
       <section id="solution" className="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12 reveal">
             <h2 className="font-serif text-3xl md:text-4xl text-nutri-dark dark:text-white font-bold mb-6 transition-colors duration-300">
-              O que você ganha no teste Premium
+              Por que escolher FitCoach.AI
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
-              { icon: <Dumbbell className="w-6 h-6" />, text: "Treinos personalizados com IA" },
-              { icon: <Camera className="w-6 h-6" />, text: "Análise inteligente de alimentação" },
-              { icon: <Mic className="w-6 h-6" />, text: "Conversa por voz com IA" },
-              { icon: <TrendingUp className="w-6 h-6" />, text: "Acompanhamento real de progresso" },
+              { icon: <Dumbbell className="w-6 h-6" />, text: "IA multimodal (texto, imagem e voz) integrada" },
+              { icon: <Camera className="w-6 h-6" />, text: "Sem custos adicionais por aluno" },
+              { icon: <Mic className="w-6 h-6" />, text: "Recargas automáticas de voz com lucro para a academia" },
+              { icon: <TrendingUp className="w-6 h-6" />, text: "Planos mensais e anuais com IA completa inclusa" },
             ].map((benefit, i) => (
               <div key={i} className="flex items-center gap-4 p-4 bg-nutri-bg dark:bg-gray-700 rounded-xl reveal delay-100">
                 <div className="w-12 h-12 bg-nutri-accent rounded-full flex items-center justify-center text-nutri-dark shrink-0">
@@ -97,19 +99,19 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
           </div>
 
           <div className="text-center mt-8">
-            <Button className="shadow-green-900/20" onClick={() => window.location.href = 'https://fit-coach-ia.vercel.app/'}>
-              Começar teste grátis
+            <Button className="shadow-green-900/20" onClick={() => navigateTo('b2b')}>
+              Quero ativar FitCoach.AI na minha academia
             </Button>
           </div>
         </div>
       </section>
 
-      {/* C) COMO FUNCIONA O TESTE */}
+      {/* C) COMO FUNCIONA */}
       <section id="how-it-works" className="py-16 bg-nutri-bg dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12 reveal">
             <h2 className="font-serif text-3xl md:text-4xl text-nutri-dark dark:text-white font-bold mb-4 transition-colors duration-300">
-              Como funciona o teste
+              Como funciona
             </h2>
           </div>
 
@@ -117,20 +119,20 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
             {[
               { 
                 step: "1", 
-                title: "Crie sua conta", 
-                text: "Cadastre-se em segundos. Não pedimos cartão de crédito.",
+                title: "Escolha seu plano", 
+                text: "Selecione o plano ideal para sua academia baseado no número de alunos.",
                 icon: <UserCheck size={24} />
               },
               { 
                 step: "2", 
-                title: "Use tudo por 3 dias", 
-                text: "Acesso Premium completo durante o período de teste.",
+                title: "Ative a IA FitCoach", 
+                text: "Receba acesso imediato com IA multimodal (texto, imagem e voz) integrada em todos os planos.",
                 icon: <ShieldCheck size={24} />
               },
               { 
                 step: "3", 
-                title: "Escolha um plano para continuar", 
-                text: "Após o trial, é necessário assinar um plano. Sem assinatura ativa, o acesso é bloqueado.",
+                title: "Alunos experimentam grátis", 
+                text: "Novos alunos ganham 3 interações gratuitas para conhecer a IA antes de decidir sobre recargas de voz.",
                 icon: <CreditCard size={24} />
               },
             ].map((item, index) => (
@@ -143,12 +145,6 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
                 <p className="text-gray-600 dark:text-gray-300 text-sm">{item.text}</p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-8 bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-600 rounded-xl p-4 text-center">
-            <p className="text-sm font-medium text-red-800 dark:text-red-200">
-              ⚠️ <strong>Lembrete:</strong> Sem assinatura ativa, o acesso é bloqueado após o trial.
-            </p>
           </div>
         </div>
       </section>
@@ -179,20 +175,17 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
                   <span className="text-green-500">✓</span>
-                  <span>Trial: <strong>3 dias</strong> de acesso Premium completo</span>
+                  <span>IA multimodal integrada — texto, imagem e voz</span>
                 </li>
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
                   <span className="text-green-500">✓</span>
-                  <span>Sem cartão de crédito no teste</span>
+                  <span>3 interações gratuitas para novos alunos</span>
                 </li>
-                <li className="flex items-center gap-2 text-red-600 dark:text-red-400">
-                  <span>⚠️</span>
-                  <span><strong>Após o trial:</strong> Acesso bloqueado sem plano ativo</span>
+                <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
+                  <span className="text-green-500">✓</span>
+                  <span>Recargas opcionais de voz</span>
                 </li>
               </ul>
-              <Button className="w-full" onClick={() => scrollToSection('pricing')}>
-                Ver planos individuais
-              </Button>
             </div>
 
             {/* Academias */}
@@ -211,15 +204,15 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
                   <span className="text-blue-500">✓</span>
-                  <span>Plataforma de gestão completa</span>
+                  <span>IA multimodal integrada — texto, imagem e voz inclusos</span>
                 </li>
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
                   <span className="text-blue-500">✓</span>
-                  <span>Alunos recebem 3 dias de trial gratuito da IA</span>
+                  <span>Alunos novos ganham 3 interações gratuitas</span>
                 </li>
                 <li className="flex items-center gap-2 text-gray-700 dark:text-gray-200">
                   <span className="text-blue-500">✓</span>
-                  <span>Valor fixo mensal, sem surpresas</span>
+                  <span>Recargas de voz opcionais com lucro para a academia</span>
                 </li>
               </ul>
               <Button 
@@ -266,9 +259,12 @@ const HomeContent: React.FC<HomeContentProps> = ({ scrollToSection, faqs, openFa
 
            {/* CTA Final */}
            <div className="text-center mt-12">
-             <Button className="shadow-green-900/20 py-5 px-8 text-lg font-bold" onClick={() => window.location.href = 'https://fit-coach-ia.vercel.app/'}>
-               Começar teste grátis agora
+             <Button className="shadow-green-900/20 py-5 px-8 text-lg font-bold" onClick={() => navigateTo('b2b')}>
+               Quero ativar FitCoach.AI na minha academia
              </Button>
+             <p className="text-sm text-gray-600 dark:text-gray-400 mt-3">
+               Planos mensais e anuais com IA completa inclusa
+             </p>
            </div>
         </div>
       </section>
@@ -420,13 +416,7 @@ const App: React.FC = () => {
 
   const scrollToPlan = (planId: string) => {
     setIsMenuOpen(false);
-    if (planId === 'student-plans') {
-      // Navega para a página home onde estão os planos individuais
-      setActivePage('home');
-      setTimeout(() => {
-        document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 200);
-    } else if (activePage !== 'b2b') {
+    if (activePage !== 'b2b') {
       setActivePage('b2b');
       setTimeout(() => {
         const element = document.getElementById(planId);
@@ -454,16 +444,16 @@ const App: React.FC = () => {
 
   const faqs = [
     {
-      question: "Preciso cadastrar cartão no teste?",
-      answer: "Não. O teste de 3 dias é totalmente gratuito e não pedimos cartão de crédito. Você só precisa assinar um plano se quiser continuar usando após o período de teste."
+      question: "A IA está incluída em todos os planos?",
+      answer: "Sim. Todos os planos incluem IA multimodal (texto, imagem e voz) integrada. Não há custos adicionais por aluno. Recargas de voz são opcionais e geram lucro para a academia."
     },
     {
-      question: "Posso cancelar?",
+      question: "Como funcionam as 3 interações gratuitas?",
+      answer: "Novos alunos recebem automaticamente 3 interações gratuitas com a IA FitCoach para experimentar todas as funcionalidades (texto, imagem e voz). Após isso, podem optar por recargas de voz opcionais."
+    },
+    {
+      question: "Posso cancelar a qualquer momento?",
       answer: "Sim, você pode cancelar a qualquer momento. Não há fidelidade ou multa por cancelamento."
-    },
-    {
-      question: "O que acontece após o trial?",
-      answer: "Após os 3 dias de teste, o acesso ao app é bloqueado até você contratar um plano. Apenas a tela de pagamento permanece acessível. Nenhuma funcionalidade principal pode ser usada sem plano ativo."
     }
   ];
 
@@ -515,26 +505,6 @@ const App: React.FC = () => {
                   }`}
                 >
                   Para Academias
-                </button>
-                <button 
-                  onClick={() => {
-                    if (activePage !== 'home') {
-                      setActivePage('home');
-                      setTimeout(() => {
-                        document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }, 200);
-                    } else {
-                      document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                    setIsMenuOpen(false);
-                  }} 
-                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 ${
-                    activePage === 'home' 
-                      ? 'text-nutri-dark dark:text-white bg-gray-100 dark:bg-gray-800 font-semibold' 
-                      : 'text-gray-600 dark:text-gray-300 hover:text-nutri-dark dark:hover:text-white'
-                  }`}
-                >
-                  Planos Individuais
                 </button>
                 <button 
                   onClick={() => navigateTo('recharge')} 
@@ -638,17 +608,6 @@ const App: React.FC = () => {
             {/* Navegação Principal */}
             <div className="border-b border-gray-200 dark:border-gray-700 pb-4 mb-4">
               <button className="w-full text-left py-2 font-bold text-lg" onClick={() => { navigateTo('b2b'); }}>Início</button>
-              <button className="w-full text-left py-2" onClick={() => {
-                if (activePage !== 'home') {
-                  setActivePage('home');
-                  setTimeout(() => {
-                    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }, 200);
-                } else {
-                  document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-                setIsMenuOpen(false);
-              }}>Planos Individuais</button>
               <button className="w-full text-left py-2" onClick={() => { navigateTo('recharge'); }}>Recarga</button>
             </div>
 
@@ -683,27 +642,6 @@ const App: React.FC = () => {
                 >
                   <span>Pro - R$ 1.199,90/mês</span>
                   <ArrowRight size={16} className="text-gray-400" />
-                </button>
-              </div>
-            </div>
-
-            {/* Planos Individuais de IA para Alunos */}
-            <div className="mb-4">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">Planos Individuais (Alunos)</h3>
-              <div className="flex flex-col gap-2 text-sm">
-                <button 
-                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
-                  onClick={() => scrollToPlan('student-plans')}
-                >
-                  <span>Mensal - R$ 34,90/mês</span>
-                  <ArrowRight size={16} className="text-gray-400" />
-                </button>
-                <button 
-                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors flex justify-between items-center"
-                  onClick={() => scrollToPlan('student-plans')}
-                >
-                  <span>Anual VIP - R$ 297,00</span>
-                  <span className="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full font-bold">ECONOMIA</span>
                 </button>
               </div>
             </div>
