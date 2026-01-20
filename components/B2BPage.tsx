@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Building2, Ticket, Smartphone, Zap, ArrowRight, Star, ChevronDown, BarChart3, Users, FileText, Shield, ChevronUp, BatteryCharging, Clock, Infinity } from 'lucide-react';
+import { Check, X, Building2, Ticket, Smartphone, Zap, ArrowRight, Star, ChevronDown, BarChart3, Users, FileText, Shield, ChevronUp, BatteryCharging, Clock, Infinity } from 'lucide-react';
 import { Button } from './Button';
 
 export const B2BPage: React.FC = () => {
@@ -636,7 +636,308 @@ export const B2BPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 9. CTA Final */}
+      {/* 9. Planos FitCoach Manual (Sem IA) */}
+      <section id="manual-plans" className="py-20 px-6 max-w-7xl mx-auto bg-gray-50 dark:bg-gray-900/50">
+        <div className="text-center mb-12 reveal">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full text-xs font-bold uppercase tracking-wide mb-4">
+            Planos Econômicos
+          </div>
+          <h2 className="font-serif text-3xl md:text-4xl text-nutri-dark dark:text-white font-bold mb-4">
+            FitCoach Manual — Sem IA
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-4">
+            Planos mais econômicos para academias que preferem usar apenas a plataforma de gestão, sem inteligência artificial.
+          </p>
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-300 dark:border-yellow-700 rounded-xl p-4 max-w-xl mx-auto">
+            <p className="text-sm text-yellow-800 dark:text-yellow-200 font-medium">
+              ⚠️ <strong>Importante:</strong> Estes planos não incluem IA. Apenas plataforma de gestão manual.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-start max-w-7xl mx-auto">
+          
+          {/* FitCoach Manual 50 */}
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-300 dark:border-gray-700 relative flex flex-col reveal delay-50">
+            <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">FitCoach Manual 50</div>
+            <h3 className="font-serif text-xl md:text-2xl text-nutri-dark dark:text-white font-bold mb-1">Até 50 alunos</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
+            
+            <div className="mb-6">
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 59,90</span>
+              <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total no checkout: <span className="font-semibold">R$ 60,89</span> (inclui taxa de R$ 0,99).
+              </p>
+            </div>
+
+            <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 mb-6 text-left">
+              <p className="text-xs uppercase font-extrabold text-gray-600 dark:text-gray-300 mb-1 tracking-wider">
+                Sem IA
+              </p>
+              <ul className="text-sm text-gray-700 dark:text-gray-200 space-y-1 mt-1">
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> Plataforma de gestão manual</li>
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> 0 interações com IA</li>
+              </ul>
+            </div>
+
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/d7pupti_733873')}
+            >
+              Quero este plano
+            </Button>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Até 50 alunos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Painel de gestão</li>
+              <li className="flex items-center gap-2 text-red-600 dark:text-red-400"><X size={16} className="text-red-600 dark:text-red-400" /> Sem IA incluída</li>
+            </ul>
+          </div>
+
+          {/* FitCoach Manual 100 */}
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-300 dark:border-gray-700 flex flex-col reveal delay-100">
+            <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">FitCoach Manual 100</div>
+            <h3 className="font-serif text-xl md:text-2xl text-nutri-dark dark:text-white font-bold mb-1">Até 100 alunos</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
+            
+            <div className="mb-6">
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 129,90</span>
+              <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total no checkout: <span className="font-semibold">R$ 130,89</span> (inclui taxa de R$ 0,99).
+              </p>
+            </div>
+
+            <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 mb-6 text-left">
+              <p className="text-xs uppercase font-extrabold text-gray-600 dark:text-gray-300 mb-1 tracking-wider">
+                Sem IA
+              </p>
+              <ul className="text-sm text-gray-700 dark:text-gray-200 space-y-1 mt-1">
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> Plataforma de gestão manual</li>
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> 0 interações com IA</li>
+              </ul>
+            </div>
+
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/etm9bn6_733901')}
+            >
+              Quero este plano
+            </Button>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Até 100 alunos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Gestão avançada</li>
+              <li className="flex items-center gap-2 text-red-600 dark:text-red-400"><X size={16} className="text-red-600 dark:text-red-400" /> Sem IA incluída</li>
+            </ul>
+          </div>
+
+          {/* FitCoach Manual 200 */}
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-300 dark:border-gray-700 flex flex-col reveal delay-200">
+            <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">FitCoach Manual 200</div>
+            <h3 className="font-serif text-xl md:text-2xl text-nutri-dark dark:text-white font-bold mb-1">Até 200 alunos</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
+            
+            <div className="mb-6">
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 229,90</span>
+              <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total no checkout: <span className="font-semibold">R$ 230,89</span> (inclui taxa de R$ 0,99).
+              </p>
+            </div>
+
+            <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 mb-6 text-left">
+              <p className="text-xs uppercase font-extrabold text-gray-600 dark:text-gray-300 mb-1 tracking-wider">
+                Sem IA
+              </p>
+              <ul className="text-sm text-gray-700 dark:text-gray-200 space-y-1 mt-1">
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> Plataforma de gestão manual</li>
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> 0 interações com IA</li>
+              </ul>
+            </div>
+
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/36aesom_733906')}
+            >
+              Quero este plano
+            </Button>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Até 200 alunos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Relatórios completos</li>
+              <li className="flex items-center gap-2 text-red-600 dark:text-red-400"><X size={16} className="text-red-600 dark:text-red-400" /> Sem IA incluída</li>
+            </ul>
+          </div>
+
+          {/* FitCoach Manual 300 */}
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-300 dark:border-gray-700 flex flex-col reveal delay-300">
+            <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">FitCoach Manual 300</div>
+            <h3 className="font-serif text-xl md:text-2xl text-nutri-dark dark:text-white font-bold mb-1">Até 300 alunos</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
+            
+            <div className="mb-6">
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 329,90</span>
+              <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total no checkout: <span className="font-semibold">R$ 330,89</span> (inclui taxa de R$ 0,99).
+              </p>
+            </div>
+
+            <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 mb-6 text-left">
+              <p className="text-xs uppercase font-extrabold text-gray-600 dark:text-gray-300 mb-1 tracking-wider">
+                Sem IA
+              </p>
+              <ul className="text-sm text-gray-700 dark:text-gray-200 space-y-1 mt-1">
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> Plataforma de gestão manual</li>
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> 0 interações com IA</li>
+              </ul>
+            </div>
+
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/3apuwtk_733924')}
+            >
+              Quero este plano
+            </Button>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Até 300 alunos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Multi-unidade</li>
+              <li className="flex items-center gap-2 text-red-600 dark:text-red-400"><X size={16} className="text-red-600 dark:text-red-400" /> Sem IA incluída</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-start max-w-7xl mx-auto mt-6">
+          
+          {/* FitCoach Manual 400 */}
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-300 dark:border-gray-700 flex flex-col reveal delay-400">
+            <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">FitCoach Manual 400</div>
+            <h3 className="font-serif text-xl md:text-2xl text-nutri-dark dark:text-white font-bold mb-1">Até 400 alunos</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
+            
+            <div className="mb-6">
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 429,90</span>
+              <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total no checkout: <span className="font-semibold">R$ 430,89</span> (inclui taxa de R$ 0,99).
+              </p>
+            </div>
+
+            <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 mb-6 text-left">
+              <p className="text-xs uppercase font-extrabold text-gray-600 dark:text-gray-300 mb-1 tracking-wider">
+                Sem IA
+              </p>
+              <ul className="text-sm text-gray-700 dark:text-gray-200 space-y-1 mt-1">
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> Plataforma de gestão manual</li>
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> 0 interações com IA</li>
+              </ul>
+            </div>
+
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/y9i88sn_733931')}
+            >
+              Quero este plano
+            </Button>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Até 400 alunos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Gestão completa</li>
+              <li className="flex items-center gap-2 text-red-600 dark:text-red-400"><X size={16} className="text-red-600 dark:text-red-400" /> Sem IA incluída</li>
+            </ul>
+          </div>
+
+          {/* FitCoach Manual 500 */}
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-300 dark:border-gray-700 flex flex-col reveal delay-500">
+            <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">FitCoach Manual 500</div>
+            <h3 className="font-serif text-xl md:text-2xl text-nutri-dark dark:text-white font-bold mb-1">Até 500 alunos</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
+            
+            <div className="mb-6">
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 529,90</span>
+              <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total no checkout: <span className="font-semibold">R$ 530,89</span> (inclui taxa de R$ 0,99).
+              </p>
+            </div>
+
+            <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 mb-6 text-left">
+              <p className="text-xs uppercase font-extrabold text-gray-600 dark:text-gray-300 mb-1 tracking-wider">
+                Sem IA
+              </p>
+              <ul className="text-sm text-gray-700 dark:text-gray-200 space-y-1 mt-1">
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> Plataforma de gestão manual</li>
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> 0 interações com IA</li>
+              </ul>
+            </div>
+
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/ycavtyt_733939')}
+            >
+              Quero este plano
+            </Button>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Até 500 alunos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Gestão completa</li>
+              <li className="flex items-center gap-2 text-red-600 dark:text-red-400"><X size={16} className="text-red-600 dark:text-red-400" /> Sem IA incluída</li>
+            </ul>
+          </div>
+
+          {/* FitCoach Manual 600 */}
+          <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-[2rem] shadow-lg border border-gray-300 dark:border-gray-700 flex flex-col reveal delay-600">
+            <div className="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">FitCoach Manual 600</div>
+            <h3 className="font-serif text-xl md:text-2xl text-nutri-dark dark:text-white font-bold mb-1">Até 600 alunos</h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
+            
+            <div className="mb-6">
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 629,90</span>
+              <span className="text-gray-500 text-sm">/mês</span>
+              <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
+                Valor total no checkout: <span className="font-semibold">R$ 630,89</span> (inclui taxa de R$ 0,99).
+              </p>
+            </div>
+
+            <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 mb-6 text-left">
+              <p className="text-xs uppercase font-extrabold text-gray-600 dark:text-gray-300 mb-1 tracking-wider">
+                Sem IA
+              </p>
+              <ul className="text-sm text-gray-700 dark:text-gray-200 space-y-1 mt-1">
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> Plataforma de gestão manual</li>
+                <li><Check size={14} className="inline text-gray-400 mr-1" /> 0 interações com IA</li>
+              </ul>
+            </div>
+
+            <Button
+              variant="outline"
+              fullWidth
+              className="mb-8 dark:text-white dark:border-gray-600"
+              onClick={() => handlePurchase('https://pay.cakto.com.br/vobyxhj_733955')}
+            >
+              Quero este plano
+            </Button>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Até 600 alunos</li>
+              <li className="flex items-center gap-2"><Check size={16} className="text-green-500" /> Gestão completa</li>
+              <li className="flex items-center gap-2 text-red-600 dark:text-red-400"><X size={16} className="text-red-600 dark:text-red-400" /> Sem IA incluída</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 10. CTA Final */}
       <section className="py-20 px-6 max-w-4xl mx-auto text-center">
         <div className="bg-gradient-to-br from-blue-600 to-nutri-dark dark:from-blue-700 dark:to-gray-900 rounded-3xl p-12 text-white reveal">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
