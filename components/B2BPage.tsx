@@ -664,10 +664,10 @@ export const B2BPage: React.FC = () => {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
             
             <div className="mb-6">
-              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 59,90</span>
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 149,90</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
-                Valor total no checkout: <span className="font-semibold">R$ 60,89</span> (inclui taxa de R$ 0,99).
+                Valor total no checkout: <span className="font-semibold">R$ 150,89</span> (inclui taxa de R$ 0,99).
               </p>
             </div>
 
@@ -703,10 +703,10 @@ export const B2BPage: React.FC = () => {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
             
             <div className="mb-6">
-              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 129,90</span>
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 299,80</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
-                Valor total no checkout: <span className="font-semibold">R$ 130,89</span> (inclui taxa de R$ 0,99).
+                Valor total no checkout: <span className="font-semibold">R$ 300,79</span> (inclui taxa de R$ 0,99).
               </p>
             </div>
 
@@ -742,10 +742,10 @@ export const B2BPage: React.FC = () => {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
             
             <div className="mb-6">
-              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 229,90</span>
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 599,60</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
-                Valor total no checkout: <span className="font-semibold">R$ 230,89</span> (inclui taxa de R$ 0,99).
+                Valor total no checkout: <span className="font-semibold">R$ 600,59</span> (inclui taxa de R$ 0,99).
               </p>
             </div>
 
@@ -781,10 +781,10 @@ export const B2BPage: React.FC = () => {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
             
             <div className="mb-6">
-              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 329,90</span>
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 899,40</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
-                Valor total no checkout: <span className="font-semibold">R$ 330,89</span> (inclui taxa de R$ 0,99).
+                Valor total no checkout: <span className="font-semibold">R$ 900,39</span> (inclui taxa de R$ 0,99).
               </p>
             </div>
 
@@ -824,10 +824,10 @@ export const B2BPage: React.FC = () => {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
             
             <div className="mb-6">
-              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 429,90</span>
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 1.199,20</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
-                Valor total no checkout: <span className="font-semibold">R$ 430,89</span> (inclui taxa de R$ 0,99).
+                Valor total no checkout: <span className="font-semibold">R$ 1.200,19</span> (inclui taxa de R$ 0,99).
               </p>
             </div>
 
@@ -863,10 +863,10 @@ export const B2BPage: React.FC = () => {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
             
             <div className="mb-6">
-              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 529,90</span>
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 1.499,00</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
-                Valor total no checkout: <span className="font-semibold">R$ 530,89</span> (inclui taxa de R$ 0,99).
+                Valor total no checkout: <span className="font-semibold">R$ 1.499,99</span> (inclui taxa de R$ 0,99).
               </p>
             </div>
 
@@ -902,10 +902,10 @@ export const B2BPage: React.FC = () => {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">Plataforma manual, sem IA.</p>
             
             <div className="mb-6">
-              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 629,90</span>
+              <span className="text-2xl md:text-3xl font-bold text-nutri-dark dark:text-white">R$ 1.798,80</span>
               <span className="text-gray-500 text-sm">/mês</span>
               <p className="mt-1 text-[11px] text-gray-500 dark:text-gray-400">
-                Valor total no checkout: <span className="font-semibold">R$ 630,89</span> (inclui taxa de R$ 0,99).
+                Valor total no checkout: <span className="font-semibold">R$ 1.799,79</span> (inclui taxa de R$ 0,99).
               </p>
             </div>
 
